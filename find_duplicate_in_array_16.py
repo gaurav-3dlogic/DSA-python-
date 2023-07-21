@@ -10,7 +10,7 @@ def duplicates(arr, n):
         return -1
     return r
 
-arr = [2, 3, 1, 2, 3, 0, 0]
+arr = [2, 3, 1, 2, 3, 0, 0,-1,-1,-2,-1,-2]
 n = len(arr)
 
 print(duplicates(arr, n))
