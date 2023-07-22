@@ -5,7 +5,7 @@ def merge(intervals):
             return x
         intervals.sort()
         
-        temp=intervals[0]   
+        temp=intervals[0]
         for i in intervals:
             
             if temp[1]>=i[0]:

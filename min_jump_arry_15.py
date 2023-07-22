@@ -4,7 +4,7 @@ def jump(nums):
     farthest = 0
 
     for i in range(len(nums) - 1):
-      farthest = max(farthest, i + nums[i])
+      farthest = max(farthest, i + nums[i]) 
       if farthest >= len(nums) - 1:
         ans += 1
         break
