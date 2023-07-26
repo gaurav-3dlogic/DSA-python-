@@ -1,16 +1,13 @@
-def maxSumArr(arr,n):
-    sum = 0
-    maxSum = 0
-    n = len(arr)
-    
-    for i in range(n):
-        sum = sum + arr[i]
-        maxSum = max(maxSum,sum)
-        
-        
-        if sum < 0:
-            sum = 0
-    return maxSum
-arr = [1,2,3,4,-1,-2,5]
-n = len(arr)
-print(maxSumArr(arr,n))    
+def reveseArray(arr,m):
+    s = m +1 
+    e = len(arr) -1
+    while(s <= e):
+        arr[s],arr[e] = arr[e],arr[s]
+        s += 1
+        e -= 1
+    return arr
+
+
+arr = [1,2,3,4,5]
+
+print(reveseArray(arr,1))
