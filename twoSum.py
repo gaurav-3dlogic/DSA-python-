@@ -6,7 +6,7 @@ def findArraySum(arr,n,b,m):
     carry = 0
     
     
-    while( i >= 0 && j >= 0):
+    while( i >= 0 and j >= 0):
         val1 = arr[i]
         val2 = arr[j]
         
@@ -20,7 +20,7 @@ def findArraySum(arr,n,b,m):
         
         
     
-    
+
     
     
     
