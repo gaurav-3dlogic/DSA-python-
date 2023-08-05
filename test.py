@@ -1,25 +1,22 @@
-
-
-def sort012(arr):
-    n = len(arr)
+def sort01(a):
+    # n = len(a)
     l = 0
     m = 0
-    h = n - 1
+    h = len(a) -1 
     
-    while m <= h:
-        if arr[m] == 0:
-            arr[m] , arr[l] = arr[l] , arr[m]
+    
+    while(m <= h):
+        if a[m] == 0:
+            a[m] , a[l] = a[l], a[m]    
             l += 1
             m += 1
-        elif arr[m] == 1:
-            m  += 1
-        else:
-            arr[m] , arr[h] = arr[h] , arr[m]
+        elif a[m] == 1:
             m += 1
+        else:
+            a[m] , a[h] = a[h] , a[m]
             h -= 1
-
+          
+        return a
+a = [2,1,0,1,2]    
+print(sort01(a))    
         
-    return arr
-
-arr = [0,0,2,1,2,1,1,0]
-print(sort012(arr))
