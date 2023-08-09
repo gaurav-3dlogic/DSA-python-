@@ -1,20 +1,19 @@
-def kadane(a,n):
-    n = len(a)
-    summ = 0
-    maxSum = 0
+def jump(a):
+    ans = 0
+    far = 0
+    end = 0
     
-    
-    for i in range(n):
-        summ = a[i]  + summ 
-        
-        maxSum = max(maxSum,summ)
-        
-        
-        if summ < 0:
-            summ = 0
+    for i in range(len(a) - 1):
+        far = max(far, i + a[i])
+        if far >= len(a) - 1:
+            ans += 1 
+            break 
+        if i == end:
+            ans += 1
+            end = far
             
-    return maxSum
+    return ans 
 
-a = [9,-3,5,0,1,2]
-n = len(a)
-print(kadane(a,n))
+
+a = [2,3,1,1,4]
+print(jump(a))
