@@ -50,3 +50,6 @@ common_elements = solution.commonElements(ar1, ar2, ar3)
 
 # Print the common elements
 print("Common Elements:", common_elements)
+
+
+#output Common Elements: [20, 80]
