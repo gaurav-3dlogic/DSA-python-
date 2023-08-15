@@ -1,19 +1,22 @@
-def jump(a):
-    ans = 0
-    far = 0
-    end = 0
+def pair(arr,target):
+    num = {}
+    pairs = []
     
-    for i in range(len(a) - 1):
-        far = max(far, i + a[i])
-        if far >= len(a) - 1:
-            ans += 1 
-            break 
-        if i == end:
-            ans += 1
-            end = far
+    
+    
+    for i in arr:
+        c = target - i
+        if c in num:
+            pair = (c,i)
+            pairs.append(pair)
             
-    return ans 
+        if i in num:
+            num[i] += 1
+        else:
+            num[i] = 1
+    return pairs
 
+arr = [1, 5, 7, -1]
+target = 6
 
-a = [2,3,1,1,4]
-print(jump(a))
+print(pair(arr,target))
