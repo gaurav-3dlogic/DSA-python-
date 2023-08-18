@@ -1,20 +1,20 @@
-def maxProduct(arr, n):
-        maxp=float("-inf")
-        prod=1
-        for i in range(n):
-            prod*=arr[i]
-            maxp=max(prod, maxp)
-            if prod==0:
-                prod=1
-        prod=1            
-        for i in range(n-1,-1,-1):
-            prod*=arr[i]
-            maxp=max(prod, maxp)
-            if prod==0:
-                prod=1
-        return maxp 
-    
-arr = [1,2,3,-4]
-n = len(arr)
+def maxProds(arr):
+    prod = 1
+    maxprod = float("-inf")
+    for i in range(len(arr)):
+        prod *= arr[i]
+        maxprod = max(prod,maxprod)
+        if prod == 0:
+            prod = 1
+    prod = 1
+    for i in range(len(arr)-1,-1,-1):
+        prod *= arr[i]
+        maxprod = max(prod,maxprod)
+        if prod == 0:
+            prod = 1
+            
+    return maxprod
 
-print(maxProduct(arr, n))
+arr = [-8,2,3,5]
+print(maxProds(arr))
+        
