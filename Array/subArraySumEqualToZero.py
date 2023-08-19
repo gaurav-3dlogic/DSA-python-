@@ -1,8 +1,6 @@
 def SubArr(arr,n):
     n = len(arr)
     sumi = 0
-    
-    
     for j in range(n):
         sumi = arr[j]
         
