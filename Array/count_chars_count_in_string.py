@@ -10,7 +10,7 @@ def countChars(a):
 a = "gaurav"
 
 
-# print(countChars(a))
+print(countChars(a))
 
 # def countString(a):
 #     c = []
