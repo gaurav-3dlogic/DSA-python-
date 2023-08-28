@@ -34,7 +34,8 @@ def find3Numbers(A, n, sum):
 			
 			elif (A[i] + A[l] + A[r] < sum):
 				l += 1
-			else: # A[i] + A[l] + A[r] > sum
+			else: 
+       # A[i] + A[l] + A[r] > sum
 				r -= 1
 
 	return False
