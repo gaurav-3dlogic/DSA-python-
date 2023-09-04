@@ -1,37 +1,24 @@
-def minSwap (arr, n, k) : 
-    
-    count = 0
-    for i in range(0, n) :
-        if (arr[i] <= k) :
-            count = count + 1
-     
-    bad = 0
-    for i in range(0, count) :
-        if (arr[i] > k) :
-            bad = bad + 1
-     
-    ans = bad
-    j = count
-    for i in range(0, n) :
-         
-        if(j == n) :
-            break
-             
-        if (arr[i] > k) :
-            bad = bad - 1
-         
-        if (arr[j] > k) :
-            bad = bad + 1
-         
-        ans = min(ans, bad)
- 
-        j = j + 1
- 
-    return ans
+def is_palindrome(s):
+    return s == s[::-1]
+
+def all_palindromes(arr):
+    for item in arr:
+        if not is_palindrome(str(item)):
+            return False
+    return True
+
+arr = [121, 1331, 1221, 3443]
+result = all_palindromes(arr)
+print(result)  # Output: True
 
 
-arr = [2, 7, 9, 5, 8, 7, 4] 
-n = len(arr)
-k = 6
 
-print(minSwap (arr, n, k))
+# is_palindrome = lambda s: s == s[::-1]
+
+# def all_palindromes(arr):
+#     return all(map(lambda item: is_palindrome(str(item)), arr))
+
+# arr = [121, 1331, 1221, 3443]
+# result = all_palindromes(arr)
+# print(result)  # Output: True
+
