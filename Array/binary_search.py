@@ -1,7 +1,7 @@
 def binarySearch(arr,l,r,x):
   
   while l <= r:
-    mid = l + (r - 1) // 2
+    mid = l + (r - l) // 2
     
     if arr[mid] == x:
       return mid
@@ -14,7 +14,7 @@ def binarySearch(arr,l,r,x):
   return -1
 
 arr = [2,3,4,10,40]
-x = 10
+x = 2
 
 
 result = binarySearch(arr,0,len(arr)-1,x)
