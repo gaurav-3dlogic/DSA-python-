@@ -1,15 +1,34 @@
-#Move all negitive numbers one side
+def find_union_and_intersection(arr1, arr2):
+    union_result = []
+    intersection_result = []
+    i, j = 0, 0
 
-def moveAllnegitive(arr,n):
-    j = 0
-    for i in range(0,n):
-        if arr[i] > 0:
-            temp = arr[i]
-            arr[i] = arr[j]
-            arr[j] = temp
+    while i < len(arr1) and j < len(arr2):
+        if arr1[i] < arr2[j]:
+            union_result.append(arr1[i])
+            i += 1
+        elif arr1[i] > arr2[j]:
+            union_result.append(arr2[j])
             j += 1
-    print(arr)
+        else:
+            union_result.append(arr1[i])
+            intersection_result.append(arr1[i])
+            i += 1
+            j += 1
 
-arr = [1,-10,9,1,-7,1,-23]
-n = len(arr)
-print(moveAllnegitive(arr,n))
+    # Add remaining elements from both arrays to the union_result
+    while i < len(arr1):
+        union_result.append(arr1[i])
+        i += 1
+    while j < len(arr2):
+        union_result.append(arr2[j])
+        j += 1
+
+    return union_result, intersection_result
+
+# Example usage
+arr1 = [1, 3, 4, 5, 7]
+arr2 = [2, 3, 5, 6]
+union_result, intersection_result = find_union_and_intersection(arr1, arr2)
+print("Union:", union_result)
+print("Intersection:", intersection_result)
