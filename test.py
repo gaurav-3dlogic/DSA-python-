@@ -1,14 +1,18 @@
-n = [1,7,22,5,46,20,2,3]
-c = []
-for i in range(len(n)):
-    m = n[0]
-    for j in n:
-        if j < m:
-            m = j
-    c.append(m)
-    n.remove(m)
-print(c)
+def sort01(arr,n):
+    l,m,h = 0,0,len(arr) -1
+    while(m <= h):
+        if(arr[m] == 0):
+            arr[m] , arr[l] = arr[l] , arr[m]
+            m += 1
+            l += 1
+        elif(arr[m] == 1):
+            m  += 1
+        else:
+            arr[m] , arr[h] = arr[h] , arr[m]
+            h -= 1
 
-
-#Time complexity - 0(n2)
-#space complxity - 0(n)
+    return arr
+arr = [2,1,0,2,1,0,1,0]
+n = len(arr)
+print(sort01(arr,n))
+    
