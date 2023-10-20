@@ -1,4 +1,4 @@
-#Prime number
+#Prime number Program
 n = int(input("Enter a number: "))
 
 if(n >= 2):
