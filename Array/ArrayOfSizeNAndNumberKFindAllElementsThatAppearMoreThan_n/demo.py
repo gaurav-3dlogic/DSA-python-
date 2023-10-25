@@ -1,4 +1,4 @@
-#Prime number Program for everybody
+ 
 n = int(input("Enter a number: "))
 
 if(n >= 2):
