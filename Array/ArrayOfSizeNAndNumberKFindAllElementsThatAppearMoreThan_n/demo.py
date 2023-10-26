@@ -1,14 +1,26 @@
- 
-n = int(input("Enter a number: "))
+# Program to check if a number is prime or not
 
-if(n >= 2):
-    for i in range(2, n):
-        if(n % i == 0):
-            print("Number is not prime")
+num = 29
+
+# To take input from the user
+#num = int(input("Enter a number: "))
+
+# define a flag variable
+flag = False
+
+if num == 1:
+    print(num, "is not a prime number")
+elif num > 1:
+    # check for factors
+    for i in range(2, num):
+        if (num % i) == 0:
+            # if factor is found, set flag to True
+            flag = True
+            # break out of loop
             break
-            
-        else:
-            print("Number is prime")
-            
-else:
-    print("Number is not prime")
+
+    # check if flag is True
+    if flag:
+        print(num, "is not a prime number")
+    else:
+        print(num, "is a prime number")
