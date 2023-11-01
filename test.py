@@ -1,14 +1,18 @@
 
+def reverseString(str):
+    b = list(str)
+    s = 0
+    e = len(b) - 1
 
-def reverseArray(arry,s,e):
+
     while(s < e):
-        arry[s] , arry[e] = arry[e] , arry[s] 
+        b[s] , b[e] = b[e], b[s]
         s += 1
         e -= 1
 
+       
+    return ''.join(b) 
 
-arry = [1,2,3,4,5]
+str = "abc"
+print(reverseString(str))
 
-reverseArray(arry,0,4)
-
-print(arry)
