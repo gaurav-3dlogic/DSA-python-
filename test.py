@@ -1,15 +1,13 @@
+a = {"a": 1, "b": 2, "c": 3}
+dict_a = {}
+
+# while a:
+#     key,values = a.popitem()
+#     dict_a[key] = values
+# print(str(dict_a))
 
 
+for key,values in a.items():
+    dict_a[values] = key
+print(dict_a)
 
-def reverseDict(input_dict):
-    reversed_dict = {}
-    for key,values in input_dict.items():
-        reversed_dict[values] = key
-
-    return reversed_dict
-
-
-input_dict = {"a":1, "b":2, "c":3}
-a = reverseDict(input_dict)
-
-print(a)
