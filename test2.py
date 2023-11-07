@@ -21,7 +21,7 @@
 #     rev_dict[key] = value
 
 # print(str(rev_dict))
-
+    
 
 # revert key with value
 def reverse_dict(input_dict):
