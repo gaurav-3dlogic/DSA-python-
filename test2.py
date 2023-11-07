@@ -24,16 +24,25 @@
     
 
 # revert key with value
-def reverse_dict(input_dict):
-    reversed_dict = {}  # Initialize an empty dictionary to store reversed key-value pairs
+# def reverse_dict(input_dict):
+#     reversed_dict = {}  # Initialize an empty dictionary to store reversed key-value pairs
 
-    for key, value in input_dict.items():
-        reversed_dict[value] = key  # Swap key and value in the reversed dictionary
+#     for key, value in input_dict.items():
+#         reversed_dict[value] = key  # Swap key and value in the reversed dictionary
 
-    return reversed_dict
+#     return reversed_dict
 
-# Example usage:
-input_dict = {"a": 1, "b": 2, "c": 3}
-reversed_dict = reverse_dict(input_dict)
-print(reversed_dict)
+# # Example usage:
+# input_dict = {"a": 1, "b": 2, "c": 3}
+# reversed_dict = reverse_dict(input_dict)
+# print(reversed_dict)
 
+#Reverse key with values
+def reverse_dict(a):
+    rev_dict = {}
+    for key,value in a.items():
+        rev_dict[value] = key
+    return rev_dict
+
+a = {"a":1, "b":2, "c":3, "d":4}
+print(reverse_dict(a))
