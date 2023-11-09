@@ -1,22 +1,15 @@
-# a = [1,2,3,4,5,6,7,8,9]
-# b = [2,3,4,4,6,8,1]
+def maxArr(arr,n):
 
+    maxSum = 0
+    sum = 0
+    n = len(arr)
+    for i in range(n):
+        sum = sum + arr[i]
+        maxSum = max(maxSum,sum)
 
-# c = []
-# for i in a:
-#     if i in b and i not in c:
-#         c.append(i)
-# print(c)
-
-
-
-
-
-def intersection(lst1, lst2):
-    lst3 = [value for value in lst1 if value in lst2]
-    return lst3
- 
-# Driver Code
-lst1 = [1,2,3,4,5,6,7,8,9]
-lst2 = [2,3,4,4,6,8,1]
-print(intersection(lst1, lst2))
+        if sum  < 0:
+            sum = 0
+    return maxSum
+arr = [-2, -3, 4, -1, -2, 1, 5, -3]
+n = len(arr)
+print(maxArr(arr,n))
