@@ -17,5 +17,3 @@ def jump(nums):
 nums = [2,3,1,1,4]
 print(jump(nums))
 
-
-#test data
