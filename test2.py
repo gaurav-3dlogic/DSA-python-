@@ -6,7 +6,7 @@ def jump(nums):
     for i in range(len(nums)-1):
         far = max(far, i + nums[i])
         if far >= len(nums) -1:
-            ans += 1
+            ans += 1 
             break
 
         if i == end:
@@ -18,7 +18,4 @@ nums = [2,3,1,1,4]
 print(jump(nums))
 
 
-
-
-
-
+#test data
