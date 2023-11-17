@@ -14,6 +14,6 @@ def jump(nums):
             end = far
     return ans
 
-nums = [2,3,1,1,4]
+nums =   [2,3,1,1,4]
 print(jump(nums))
 
