@@ -1,19 +1,11 @@
-def jump(nums):
-    ans = 0
-    end = 0
-    far = 0
+def reverseStr(arr):
+    n = len(arr)
+    l,r = 0, n -1
+    while(l <= r):
+        arr[l] , arr[r] = arr[r], arr[l]
+        l += 1
+        r -= 1
+    return arr
 
-    for i in range(len(nums)-1):
-        far = max(far, i + nums[i])
-        if far >= len(nums) -1:
-            ans += 1 
-            break
-
-        if i == end:
-            ans += 1
-            end = far
-    return ans
-
-nums =   [2,3,1,1,4]
-print(jump(nums))
-
+arr = [1,2,4]
+print(reverseStr(arr))
