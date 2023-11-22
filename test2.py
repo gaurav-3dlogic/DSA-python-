@@ -1,20 +1,18 @@
-# def reverseStr(arr):
-#     n = len(arr)
-#     l,r = 0, n -1
-#     while(l <= r):
-#         arr[l] , arr[r] = arr[r], arr[l]
-#         l += 1
-#         r -= 1
-#     return arr
+#Kandane Algo
+def maxSumarr(arr,n):
 
-arr = [1,2,4]
-print(reverseStr(arr))
+    n = len(arr)
+    maxSum = 0
+    sum = 0
 
-arr = [1,2,4,5,0,-3,7]
-k = 3
-arr.sort()
-print(arr)
-print(arr[k -1])
+    for i in range(n):
+        sum += arr[i]
+        maxSum = max(maxSum,sum)
 
-print(arr[-k])
 
+        if sum < 0:
+            sum = 0
+    return  maxSum
+arr = [2,-3,3,2,1,-2,0,-9,1]
+n = len(arr)
+print(maxSumarr(arr,n))
