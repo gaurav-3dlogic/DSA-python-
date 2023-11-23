@@ -1,18 +1,27 @@
-#Kandane Algo
-def maxSumarr(arr,n):
+#Binary Search
+def BinarySearch(arr,l,r,x):
+    
 
-    n = len(arr)
-    maxSum = 0
-    sum = 0
+    while l <= r:
+        mid = l + (r - l) // 2
 
-    for i in range(n):
-        sum += arr[i]
-        maxSum = max(maxSum,sum)
+        if arr[mid] == x:
+            return mid
+    
+        elif arr[mid] < x:
+            l = mid + 1
+
+        else:
+            r = mid - 1
+        
+    return -1
+
+arr = [3,1,4,5,2,6,78]
+x = 3
+res = BinarySearch(arr,0,len(arr) -1,x)
+if res != -1:
+    print(res)
+else:
+    print("Array is not binary search")
 
 
-        if sum < 0:
-            sum = 0
-    return  maxSum
-arr = [2,-3,3,2,1,-2,0,-9,1]
-n = len(arr)
-print(maxSumarr(arr,n))
