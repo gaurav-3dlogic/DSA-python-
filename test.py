@@ -1,7 +1,7 @@
+#Binary search program
+
 def binarySearch(arr,l,r,x):
         
-
-
     while l <= r:
         mid = l + (r -l) // 2
 
