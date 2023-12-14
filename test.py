@@ -1,25 +1,23 @@
-def binarySearch(arr,l,r,x):
-        
-    while l <= r:
-        mid = l + (r -l) // 2
+def sort01(arr):
+    n = len(arr)
+    l,m,h = 0,0, n - 1
 
 
-        if arr[mid] ==  x:
-            return mid 
+    while m <= h:
+        if arr[m] == 0:
+            arr[l] , arr[m] = arr[m] , arr[l]
+            l += 1
+            m += 1
+
+
+        elif arr[m] == 1:
+            m += 1
         
-        elif arr[mid] < x:
-            l = mid + 1
         else:
-            r = mid -1 
-    return -1
+            arr[m] , arr[h] = arr[h] , arr[m]
+            h -= 1
+    return arr
 
-arr = [2,3,4,10,40]
-x = 2
-
-res = binarySearch(arr,0,len(arr) - 1,x)
-
-if res != 1:
-    print("Elements is present at index ",res)
-else:
-    print("Elements is not present in array")
-
+arr = [2,1,0,1,2,1,0]
+n = len(arr)
+print(sort01(arr))
