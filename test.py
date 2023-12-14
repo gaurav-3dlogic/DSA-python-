@@ -1,23 +1,14 @@
-def sort01(arr):
-    n = len(arr)
-    l,m,h = 0,0, n - 1
+def reverse(arr):
+    start = 0
+    end = len(arr) -1
 
+    while start < end:
+        arr[start], arr[end] = arr[end], arr[start]
+        start += 1
+        end -= 1
 
-    while m <= h:
-        if arr[m] == 0:
-            arr[l] , arr[m] = arr[m] , arr[l]
-            l += 1
-            m += 1
-
-
-        elif arr[m] == 1:
-            m += 1
-        
-        else:
-            arr[m] , arr[h] = arr[h] , arr[m]
-            h -= 1
     return arr
 
-arr = [2,1,0,1,2,1,0]
-n = len(arr)
-print(sort01(arr))
+arr = [1,2,3,4]
+print(reverse(arr))
+    
