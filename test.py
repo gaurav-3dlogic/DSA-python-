@@ -13,9 +13,6 @@ def sort0_1_2(a):
             a[m] , a[h] = a[h] , a[m]
             h -= 1
         
-
-
-
     return a
 a = [2,1,0,2,1,0,2,0]
 print(sort0_1_2(a))
