@@ -1,6 +1,6 @@
 def moveNegOneSide(a):
     
-    j = 0
+    j = 0   
     n = len(a)
     
     
