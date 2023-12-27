@@ -1,8 +1,10 @@
-a = [1,-2,3,0,-9,5]
-j = 0
+# Write a program to cyclically rotate an array by one.	
+arr = [1,2,3,4]
 
-for i in range(len(a)):
-    if a[i] < 0:
-        a[i] , a[j] = a[j], a[i]
-        j += 1
-print(a)
+print([arr[-1]] + arr[0:-1])
+
+
+#output arr = [4,2,3,1]
+
+#Time complexity = 0(n)
+#Space complexity = 0(n)
