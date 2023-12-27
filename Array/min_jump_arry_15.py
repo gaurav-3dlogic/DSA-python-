@@ -10,7 +10,7 @@ def jump(nums):
         break
       if i == end:      # Visited all the items on the current level
         ans += 1        # Increment the level
-        end = far  # Make the queue size for the next level
+        end = far  # Make the  queue size for the next level
 
     return ans
 

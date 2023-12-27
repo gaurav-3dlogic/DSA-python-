@@ -1,19 +1,19 @@
-#Find Largest sum contiguous Subarray [V. IMP]	kadane algo 
-
-def findMaxSubarray(arr):
-    sum = 0
-    maxSum = 0
-
-    for i in range(len(arr)):
-        sum += arr[i]
-        maxSum = max(sum, maxSum)
-
-        if sum < 0:
-            sum = 0
+def jump(nums):
+    ans = 0
+    end = 0
+    far = 0
 
 
+    for i in range(len(nums) -1 ):
+        far = max(far, i + nums[i])
+        if far >= len(nums) -1:
+            ans += 1
+            break 
 
-    return maxSum
-arr = [-2, -3, 4, -1, -2, 1, 5, -3]
+        elif i == end:
+            ans += 1
+            end = far
+    return ans
 
-print(findMaxSubarray(arr))
+nums = [2,3,1,1,4]
+print(jump(nums))
