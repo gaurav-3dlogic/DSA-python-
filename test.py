@@ -1,25 +1,19 @@
-#sort 0 1 2
+#Find Largest sum contiguous Subarray [V. IMP]	kadane algo 
 
-def sort0_1_2(arr):
-    low , mid , high = 0,0,len(arr) - 1
-    while mid <= high:
-        if arr[mid] == 0:
-            arr[mid] , arr[low] = arr[low] , arr[mid]
-            mid += 1
-            low += 1
-        
-        elif arr[mid] == 1:
-            mid += 1 
+def findMaxSubarray(arr):
+    sum = 0
+    maxSum = 0
 
-        else:
-            arr[mid] , arr[high] = arr[high] , arr[mid]
-            high -= 1
+    for i in range(len(arr)):
+        sum += arr[i]
+        maxSum = max(sum, maxSum)
+
+        if sum < 0:
+            sum = 0
 
 
 
-    return arr
+    return maxSum
+arr = [-2, -3, 4, -1, -2, 1, 5, -3]
 
-
-arr = [2,0,1,2,0,2,1]
-
-print(sort0_1_2(arr))
+print(findMaxSubarray(arr))
