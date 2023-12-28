@@ -1,3 +1,4 @@
+#First Approach
 def duplicates(arr, n): 
     r = []
         
@@ -20,18 +21,49 @@ print(duplicates(arr, n))
 
 
 
-# def find_duplicate(arr, n):
-#     seen = set()
-    
-#     for i in range(n):
-#         if arr[i] in seen:
-#             return arr[i]
-#         else:
-#             seen.add(arr[i])
+#Second Approach
 
-#     return -1
+def find_duplicate(arr, n):
+    seen = set()
+    
+    for i in range(n):
+        if arr[i] in seen:
+            return arr[i]
+        else:
+            seen.add(arr[i])
+
+    return -1
   
   
-# arr = [1,2,2,3,3]
-# n = len(arr)
-# print(find_duplicate(arr,n))
+arr = [1,2,2,3,3]
+n = len(arr)
+print(find_duplicate(arr,n))
+
+
+
+#Third approach with time and space
+
+def find_duplicate(nums):
+    # Phase 1: Detect the intersection point
+    slow = nums[0]
+    fast = nums[0]
+
+    while True:
+        slow = nums[slow]
+        fast = nums[nums[fast]]
+
+        if slow == fast:
+            break
+
+    # Phase 2: Find the entrance to the cycle (duplicate)
+    slow = nums[0]
+    while slow != fast:
+        slow = nums[slow]
+        fast = nums[fast]
+
+    return slow
+
+# Example usage:
+arr = [1, 3, 4, 2, 2]
+duplicate = find_duplicate(arr)
+print("Duplicate:", duplicate)
