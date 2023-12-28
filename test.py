@@ -1,16 +1,23 @@
-#Kadane Alog
+def merge(nums1,m ,nums2,n):
 
-def maxSubArr(arr):
-    sum = 0
-    maxSum = 0
 
-    for i in range(len(arr)):
-        sum += arr[i]
-        maxSum = max(maxSum, sum)
+    i = m - 1
+    j = n - 1
+    k = m + n - 1
 
-        if sum < 0:
-            sum = 0
 
-    return maxSum
-arr = [1,8,-9,1,2]
-print(maxSubArr(arr))
+    while j >= 0:
+        if i >= 0 and nums1[i] > nums2[j]:
+            nums1[k] = nums1[i]
+            i -= 1
+        else:
+            nums1[k] = nums2[j]
+            j -= 1
+        k -= 1
+nums1 = [1,3,5,7]
+m = 4
+nums2 = [8,9,10]
+n = 3
+merge(nums1,m, nums2,n)
+
+print(nums1)
