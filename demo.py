@@ -1,17 +1,20 @@
-#kadane algo 
-def MaxSumSubArray(arr):
+def jump(nums):
+    ans = 0
+    end = 0
+    far = 0
 
-    sum = 0
-    maxSum = 0
+    for i in range(len(nums)-1):
+        far = max(far,i + nums[i])
+        if far >= len(nums) - 1:
+            ans += 1
+            break
+        
+        elif i == end:
+            ans += 1
+            end = far
+    return ans
 
-    for i in range(len(arr)):
-        sum += arr[i]
-        maxSum = max(maxSum, sum)
+nums = [1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9]
 
-        if sum  < 0:
-            sum = 0
+print(jump(nums))
 
-    return maxSum
-
-arr = [-2, -3, 4, -1, -2, 1, 5, -3]
-print(MaxSumSubArray(arr))
