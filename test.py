@@ -1,14 +1,18 @@
-def find_duplicate(nums):
-    seen = set()
+def find_duplicate(arr):
+    duplicate = []
+    n = len(arr)
 
-    for num in nums:
-        if num in seen:
-            return num
-        seen.add(num)
+    for i in range(n):
+        index = arr[i] % n
+        arr[index] +=  n 
 
+    for i in range(n):
+        if arr[i] // n >= 2:
+            duplicate.append(i)
 
-    return None
+    return duplicate
 
-arr = [1,2,3,4,5,1]
-duplicate = find_duplicate(arr)
-print(duplicate)
+arr = [2,3,4,2,3]
+ans = find_duplicate(arr)
+for x in ans:
+    print(x)
