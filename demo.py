@@ -1,15 +1,13 @@
-def find_duplicate(nums):
+def find_duplicates(arr):
     seen = set()
+    duplicates = []
 
-    for num in nums:
+    for num in arr:
         if num in seen:
-            return num
+            duplicates.append(num)
         seen.add(num)
 
-    # If no duplicates are found
-    return None
+    return duplicates
 
-# Example usage:
-arr = [1, 3, 4, 2, 2]
-duplicate = find_duplicate(arr)
-print("Duplicate:", duplicate)
+arr = [1, 2, 3, 4, 5, 6, 7, 2, 1]
+print(find_duplicates(arr))

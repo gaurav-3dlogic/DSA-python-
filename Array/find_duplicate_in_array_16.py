@@ -11,33 +11,30 @@ def duplicates(arr, n):
         return -1
     return r
 
-arr = [2, 3, 1, 2, 3, 0, 0,-1,-1,-2,-1,-2]
+arr = [2, 3, 1, 2, 3, 0, 0,-1,-1,-2,-1,-2,1]
 n = len(arr)
 
 print(duplicates(arr, n))
 
 
 
-
-
-
 #Second Approach
 
-def find_duplicate(arr, n):
-    seen = set()
+# def find_duplicate(arr, n):
+#     seen = set()
     
-    for i in range(n):
-        if arr[i] in seen:
-            return arr[i]
-        else:
-            seen.add(arr[i])
+#     for i in range(n):
+#         if arr[i] in seen:
+#             return arr[i]
+#         else:
+#             seen.add(arr[i])
 
-    return -1
+#     return -1
   
   
-arr = [1,2,2,3,3]
-n = len(arr)
-print(find_duplicate(arr,n))
+# arr = [1,2,2,3,3]
+# n = len(arr)
+# print(find_duplicate(arr,n))
 
 
 
