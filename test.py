@@ -1,18 +1,17 @@
-def find_duplicate(arr):
-    duplicate = []
+def cyclically_rotate_array(arr):
     n = len(arr)
 
-    for i in range(n):
-        index = arr[i] % n
-        arr[index] +=  n 
 
-    for i in range(n):
-        if arr[i] // n >= 2:
-            duplicate.append(i)
+    last_element = arr[-1]
 
-    return duplicate
 
-arr = [2,3,4,2,3]
-ans = find_duplicate(arr)
-for x in ans:
-    print(x)
+    for i in range(n-1,0,-1):
+        arr[i] = arr[i -1]
+
+    arr[0] = last_element
+
+
+arr = [1,2,3,4,5]
+cyclically_rotate_array(arr)
+print(arr)
+
