@@ -1,18 +1,14 @@
-#Kadane alogrithm
+def find_duplicate(nums):
+    seen = set()
 
-def kadane(arr):
-    sum = 0
-    maxSum = 0
-    for i in range(len(arr)):
-        sum += arr[i]
-        maxSum = max(sum, maxSum)
-
-        if sum < 0:
-            sum = 0
+    for num in nums:
+        if num in seen:
+            return num
+        seen.add(num)
 
 
+    return None
 
-    return maxSum
-
-arr = [1,2,5,-4,6,1]
-print(kadane(arr))
+arr = [1,2,3,4,5,1]
+duplicate = find_duplicate(arr)
+print(duplicate)
