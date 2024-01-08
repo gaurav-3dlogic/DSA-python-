@@ -1,19 +1,16 @@
-#Find duplicate in array
+#cyclic Rotate
 
-def find_duplicates(arr):
-    seen = set()
-    dupliate = []
+def cyclic_rotate(arr):
+    n = len(arr)
 
-    for i in arr:
-        if i in seen:
-            dupliate.append(i)
-        seen.add(i)
-    return dupliate
-
-arr = [1,2,3,4,5,6,7,8,9,10,1,2]
-
-print(find_duplicates(arr))
+    last_element = arr[-1]
 
 
+    for i in range(n-1,0,-1):
+        arr[i] = arr[i -1]
 
+    arr[0] = last_element
 
+arr = [1,2,3,4,5]
+cyclic_rotate(arr)
+print(arr)
