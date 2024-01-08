@@ -1,13 +1,16 @@
-def find_duplicates(arr):
-    seen = set()
-    duplicates = []
+def kadaneAlgo(arr):
+    sum = 0
+    maxSum = 0
 
-    for num in arr:
-        if num in seen:
-            duplicates.append(num)
-        seen.add(num)
 
-    return duplicates
+    for i in range(len(arr)):
+        sum += arr[i]
+        maxSum =  max(maxSum, sum)
 
-arr = [1, 2, 3, 4, 5, 6, 7, 2, 1]
-print(find_duplicates(arr))
+        if sum < 0:
+            sum = 0
+
+    return maxSum
+
+arr = [1,2,-5,8,0]
+print(kadaneAlgo(arr)) 
