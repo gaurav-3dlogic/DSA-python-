@@ -1,16 +1,19 @@
-def kadaneAlgo(arr):
-    sum = 0
-    maxSum = 0
+#Find duplicate in array
+
+def find_duplicates(arr):
+    seen = set()
+    dupliate = []
+
+    for i in arr:
+        if i in seen:
+            dupliate.append(i)
+        seen.add(i)
+    return dupliate
+
+arr = [1,2,3,4,5,6,7,8,9,10,1,2]
+
+print(find_duplicates(arr))
 
 
-    for i in range(len(arr)):
-        sum += arr[i]
-        maxSum =  max(maxSum, sum)
 
-        if sum < 0:
-            sum = 0
 
-    return maxSum
-
-arr = [1,2,-5,8,0]
-print(kadaneAlgo(arr)) 
