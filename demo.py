@@ -1,8 +1,8 @@
-#cyclic Rotate
+#cyclic rotate array
+
 
 def cyclic_rotate(arr):
     n = len(arr)
-
     last_element = arr[-1]
 
 
@@ -11,6 +11,7 @@ def cyclic_rotate(arr):
 
     arr[0] = last_element
 
-arr = [1,2,3,4,5]
+
+arr = [1,2,3,4]
 cyclic_rotate(arr)
 print(arr)
