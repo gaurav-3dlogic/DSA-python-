@@ -1,16 +1,26 @@
-#Move zero in right side
+def next_permutation(s):
+    i = len(s) - 2
+    while i >= 0 and s[i] >= s[i + 1]:
+        i -= 1
+    
+    if i == -1:
+        return None
+    
+    j = len(s) - 1
+    while s[j] <= s[i]:
+        j -= 1
 
-def moveZero(nums):
+    s_list = list(s)
+    s_list[i] , s_list[j] = s_list[j], s_list[i]
+    s_list[i + 1:] = reversed(s_list[i + 1:])
 
-    nonZero = 0
+    return ''.join(s_list)
+
+input_str = "acb"
+next_permutation_str = next_permutation(input_str)
 
 
-    for i in range(len(nums)):
-        if nums[i] != 0:
-            nums[nonZero] , nums[i] = nums[i] ,nums[nonZero]
-            nonZero += 1
+print(next_permutation_str)
 
-nums = [1,0,0,2,13]
-moveZero = moveZero(nums)
-print(nums)
+
 
