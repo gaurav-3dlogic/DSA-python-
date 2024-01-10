@@ -12,3 +12,6 @@ def moveZero(nums):
 nums = [1,0,0,2,13]
 moveZero(nums)
 print(nums)
+
+# Time Complexity: O(n)
+# Space Complexity: O(1)
