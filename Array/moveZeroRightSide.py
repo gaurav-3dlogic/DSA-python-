@@ -1,5 +1,5 @@
 #Moves zero in Right side
-
+# logic apne non zero ko left side m shift krlo
 def moveZero(nums):
 
     nonZero = 0

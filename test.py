@@ -1,14 +1,16 @@
-#Moves zero in Right side
+#Move zero in right side
 
 def moveZero(nums):
 
     nonZero = 0
 
+
     for i in range(len(nums)):
         if nums[i] != 0:
-            nums[nonZero] , nums[i] = nums[i], nums[nonZero]
+            nums[nonZero] , nums[i] = nums[i] ,nums[nonZero]
             nonZero += 1
 
 nums = [1,0,0,2,13]
-moveZero(nums)
+moveZero = moveZero(nums)
 print(nums)
+
