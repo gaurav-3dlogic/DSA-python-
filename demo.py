@@ -1,24 +1,22 @@
-# Merge two sorted without using any extra space 
+def mergeIntervals(intervals):
 
-def mergeTwoSorted(arr1,m,arr2,n):
-    i = m -1
-    j = n -1 
-    k = m + n - 1
+    x = []
+    if len(intervals) == 0:
+        return x
+    intervals.sort()
 
-    while j >= 0:
-        if i >= 0 and arr1[i] > arr2[j]:
-            arr1[k] = arr1[i]
-            i -= 1
+    temp = intervals[0]
+    for i in intervals:
+
+        if temp[1] >= i[0]:
+            temp[1] = max(temp[1],i[1])
+
         else:
-            arr1[k] = arr2[j]
-            j -= 1
-        k -= 1
-arr1 = [1,2,3,4]
-m = 4
-arr2 = [5,6,7]
-n = 3
+            x.append(temp)
+            temp = i 
+    x.append(temp)
 
-mergeTwoSorted(arr1,m,arr2,n)
-print(arr1)
-        
+    return x
 
+intervals = [[1,3],[2,6],[8,10],[15,18]]
+print(mergeIntervals(intervals))
