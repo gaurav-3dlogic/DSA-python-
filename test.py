@@ -3,7 +3,7 @@
 def merge_intervals(intervals):
 
     x = []
-    if len(intervals):
+    if len(intervals)==0:
         return x
     intervals.sort()
 
