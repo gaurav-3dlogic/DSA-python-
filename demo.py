@@ -1,23 +1,23 @@
-def next_permutation(s):
-
-    i = len(s) - 2
-    while i >= 0 and s[i] >= s[i + 1]:
-        i -= 1
-    
-    if i == -1:
-        return None
-    
-    j = len(s) - 1
-    while s[j] <= s[i]:
-        j -= 1
-
-    s_list = list(s)
-    s_list[i] , s_list[j] = s_list[j] , s_list[i] 
-    s_list[i + 1:] = reversed(s_list[i + 1:])
+def mergetwo(nums1,m,nums2,n):
+    i = m -1
+    j = n -1
+    k = m + n  - 1
 
 
-    return ''.join(s_list)
+    while j >= 0:
+        if i >= 0  and nums1[i] > nums2[j]:
+            nums1[k] = nums1[i]
+            i -= 1
 
-input_str = "abc"
-next_permutation = next_permutation(input_str) 
-print(next_permutation)
+        else:
+            nums1[k] = nums2[j]
+            j -= 1
+        k -= 1
+nums1 = [1,2,3,4]
+m = 4
+nums2 = [5,6,7,8]
+n = 4
+
+mergetwo(nums1,m,nums2,n)
+print(nums1)
+
