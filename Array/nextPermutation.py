@@ -3,7 +3,7 @@ def next_permutation(s):
     i = len(s) - 2
     while i >= 0 and s[i] >= s[i + 1]:
         i -= 1
-
+    
     # If no such character is found, the string is already the last permutation
     if i == -1:
         return None

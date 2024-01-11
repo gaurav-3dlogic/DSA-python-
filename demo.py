@@ -1,22 +1,23 @@
-def mergeIntervals(intervals):
+def next_permutation(s):
 
-    x = []
-    if len(intervals) == 0:
-        return x
-    intervals.sort()
+    i = len(s) - 2
+    while i >= 0 and s[i] >= s[i + 1]:
+        i -= 1
+    
+    if i == -1:
+        return None
+    
+    j = len(s) - 1
+    while s[j] <= s[i]:
+        j -= 1
 
-    temp = intervals[0]
-    for i in intervals:
+    s_list = list(s)
+    s_list[i] , s_list[j] = s_list[j] , s_list[i] 
+    s_list[i + 1:] = reversed(s_list[i + 1:])
 
-        if temp[1] >= i[0]:
-            temp[1] = max(temp[1],i[1])
 
-        else:
-            x.append(temp)
-            temp = i 
-    x.append(temp)
+    return ''.join(s_list)
 
-    return x
-
-intervals = [[1,3],[2,6],[8,10],[15,18]]
-print(mergeIntervals(intervals))
+input_str = "abc"
+next_permutation = next_permutation(input_str) 
+print(next_permutation)
