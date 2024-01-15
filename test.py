@@ -1,7 +1,8 @@
-#Reverse string
-a = "level"
+n = int(input("Enter a number : "))
 
-b = ""
-for i in a:
-    b = i + b
-print(b)
+def fact(n):
+    if n == 0:
+        return 1
+    else:
+        return n * fact(n-1)
+print(fact(n))

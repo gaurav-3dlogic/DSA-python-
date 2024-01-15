@@ -1,13 +1,11 @@
-a = 121
 
-x = a
 
-res = 0
 
-for i in range(a  ):
-    res = res * 10+ a % 10 
-    a = a // 2
-if(x == res):
-    print("Number is palindrom")
-else:
-    print(" number is not palindrom")
+def fact(n):
+    if n == 0:
+        return 1 
+    else:
+        return n * fact(n -1)
+
+n = int(input("Enter a number: "))
+print(fact(n))
