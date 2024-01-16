@@ -26,6 +26,6 @@ def fibonacci(n):
         a, b = b, a + b
 
 # Generate the Fibonacci series up to 100
-for num in fibonacci(10):
+for num in fibonacci(40):
     print(num)
 
