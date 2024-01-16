@@ -1,12 +1,16 @@
-a = 123
-res = 0
-x = a
+f = int(input("Enter a number: "))
 
 
-while a > 0:
-    res = res * 10 + a % 10
-    a = a // 10
-if x == res:
-    print("Number is palindrome")
-else:
-    print("Number is not palindrome")
+def gen(f):
+    for i in range(1,f+1):
+        fact = 1
+
+
+        for j in range(1, i + 1):
+            fact = fact * j 
+        yield fact 
+
+for fact in gen(f):
+    print(fact)
+
+
