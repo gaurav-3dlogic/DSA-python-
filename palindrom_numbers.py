@@ -1,13 +1,12 @@
-a = 121
-
+a = 123
+res = 0
 x = a
 
-res = 0
 
-for i in range(a  ):
-    res = res * 10+ a % 10 
-    a = a // 2
-if(x == res):
-    print("Number is palindrom")
+while a > 0:
+    res = res * 10 + a % 10
+    a = a // 10
+if x == res:
+    print("Number is palindrome")
 else:
-    print(" number is not palindrom")
+    print("Number is not palindrome")
