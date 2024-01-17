@@ -1,11 +1,12 @@
-def decor(printer):
-    def inner():
-            printer()
-            print("Welcome")
-    return inner
+#Find minimum element in list
 
-def printer():
-        print("Welcome")
-        print("welcome")
-pri = decor(printer)
-pri()
+n = [5,8,4,1,25,6,3]
+
+
+min1 = n[0]
+
+for i in n:
+    if i > min1:
+        min1 = i
+    
+print(min1)
