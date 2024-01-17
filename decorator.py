@@ -1,14 +1,13 @@
 def decor(printer):
     def inner():
         printer()
-        print("Welcome")
+        print("first Welcome")
     return inner
 
 
 
 
 def printer():
-    print("Welcome")
     print("Welcome")
 pri = decor(printer)
 pri()

@@ -1,14 +1,17 @@
+
+
+
+
 def decor(printer):
     def inner():
         printer()
-        print("First function call")
+        print("First welcome")
     return inner
 
 
 
-
+@decor
 def printer():
-    print("Hey this decorator")
+    print("Welcome")
 
-pri = decor(printer)
-pri()
+printer()
