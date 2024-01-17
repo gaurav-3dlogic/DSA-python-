@@ -1,4 +1,4 @@
-f = int(input("Enter a number: "))
+f = int(input("Enter a number: "))  
 
 
 def gen(f):

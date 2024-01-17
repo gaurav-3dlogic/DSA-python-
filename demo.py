@@ -1,17 +1,17 @@
+f = int(input("Enter a number: "))
 
 
+def gen(f):
+    for i in range(1,f+1):
+        fact = 1
+        
+        
+        for j in range(1,i+1):
+            fact = fact * j
+        yield fact
 
 
-def decor(printer):
-    def inner():
-        printer()
-        print("First welcome")
-    return inner
+for fact in gen(f):
+    print(fact)
 
 
-
-@decor
-def printer():
-    print("Welcome")
-
-printer()
