@@ -17,16 +17,16 @@ pri()
 #Another Way --
 
 
-def decor(printer):
-    def inner():
-        printer()
-        print("Welcome")
-    return inner
+# def decor(printer):
+#     def inner():
+#         printer()
+#         print("Welcome")
+#     return inner
 
 
 
-@decor
-def printer():
-    print("Welcome")
-    print("Welcome")
-printer()
+# @decor
+# def printer():
+#     print("Welcome")
+#     print("Welcome")
+# printer()
