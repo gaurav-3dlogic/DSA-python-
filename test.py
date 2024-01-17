@@ -1,12 +1,14 @@
-#Find minimum element in list
 
-n = [5,8,4,1,25,6,3]
+a = [5,9,1,5,10,3]
 
 
-min1 = n[0]
+m = a[0]
 
-for i in n:
-    if i > min1:
-        min1 = i
+for i in range(len(a)):
+    if i >= m:
+        m = i
+print(m)
     
-print(min1)
+    
+
+
