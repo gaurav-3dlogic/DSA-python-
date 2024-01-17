@@ -14,7 +14,7 @@ pri = decor(printer)
 pri()
 
 
-#Another Way --
+#Another Way -- 
 
 
 # def decor(printer):

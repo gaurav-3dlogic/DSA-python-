@@ -1,9 +1,11 @@
-def print_num(n):
-    for i in range(n):
-        yield i
+def decor(printer):
+    def inner():
+            printer()
+            print("Welcome")
+    return inner
 
-for num in print_num(5):
-    print(num)
-
-
-
+def printer():
+        print("Welcome")
+        print("welcome")
+pri = decor(printer)
+pri()
