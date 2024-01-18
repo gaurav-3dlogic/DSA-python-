@@ -1,17 +1,15 @@
-f = int(input("Enter a number: "))
+#map
+a = [1,5,2,3]
+b = [5,1,2,7]
+c = [5,1,2,7]
+
+# def sum(a,b,c):
+#     return a + b + c
+
+# res = list(map(sum,a,b,c))
+
+# print(res)
 
 
-def gen(f):
-    for i in range(1,f+1):
-        fact = 1
-        
-        
-        for j in range(1,i+1):
-            fact = fact * j
-        yield fact
-
-
-for fact in gen(f):
-    print(fact)
-
-
+res = list(map(lambda a,b,c : a + b + c,a,b,c))
+print(res)
