@@ -1,15 +1,14 @@
-#map
-a = [1,5,2,3]
-b = [5,1,2,7]
-c = [5,1,2,7]
+a = [1,5,2,3,4,10,12,46]
 
-# def sum(a,b,c):
-#     return a + b + c
+#First approach
+def even(a):
+    if a % 2 == 0:
+        return a
+        
+res = list(filter(even,a))
 
-# res = list(map(sum,a,b,c))
-
-# print(res)
-
-
-res = list(map(lambda a,b,c : a + b + c,a,b,c))
 print(res)
+
+#Second approach
+res1 = list(filter(lambda a:a % 2 == 0,a))
+print(res1)
