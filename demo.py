@@ -1,14 +1,12 @@
-a = [1,5,2,3,4,10,12,46]
+#reduce example
+from functools import reduce 
 
-#First approach
-def even(a):
-    if a % 2 == 0:
-        return a
-        
-res = list(filter(even,a))
+a = [1,2,3,4,5,6,7,8,9]
 
+def large(a,b):
+    if a > b:
+        return a 
+    else:
+        return b
+res = reduce(large,a)
 print(res)
-
-#Second approach
-res1 = list(filter(lambda a:a % 2 == 0,a))
-print(res1)
