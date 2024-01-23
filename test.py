@@ -1,13 +1,10 @@
-#string = "A12B7EBOM"
-string = "A12B7EBOM"
-char = []
-nums = []
+rs = [1,2,4,5,67,1,2]
 
-for i in string:
-    if i.isalpha():
-        char.append(i)
-    else:
-        nums.append(i)
-res = sorted(char)+sorted(nums)
+duplicate = []
 
-print(','.join(res))
+
+for i in rs:
+    if rs.count(i) > 1:
+        if i not in duplicate:
+            duplicate.append(i)
+print(duplicate)
