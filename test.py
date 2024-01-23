@@ -1,11 +1,13 @@
-string = input("Enter a string: ")
-result = []
+#string = "A12B7EBOM"
+string = "A12B7EBOM"
+char = []
+nums = []
 
+for i in string:
+    if i.isalpha():
+        char.append(i)
+    else:
+        nums.append(i)
+res = sorted(char)+sorted(nums)
 
-for i in range(len(string)):
-    for j in range(i+1,len(string)+1):
-        result.append(string[i:j])
-        
-        
-print(','.join(result))
-        
+print(','.join(res))
