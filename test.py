@@ -1,14 +1,11 @@
-from functools import reduce
+string = input("Enter a string: ")
+result = []
 
 
-a = [1,5,2,3,4,5,6,7,8,9,10]
-
-
-def large(a,b):
-    if a < b:
-        return a
-    else:
-        return b
-r = reduce(large, a)
-
-print(r)
+for i in range(len(string)):
+    for j in range(i+1,len(string)+1):
+        result.append(string[i:j])
+        
+        
+print(','.join(result))
+        
