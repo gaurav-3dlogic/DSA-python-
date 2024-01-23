@@ -1,14 +1,9 @@
-a = 132
+string = input("Enter a string: ")
+result = []
 
-x = a
 
-res = 0
+for i in range(len(string)):
+    for j in range(i + 1, len(string) +1 ):
+        result.append(string[i:j])
 
-while a > 0:
-    res = res * 10 + a % 10
-    a = a // 10
-
-if res == x:
-    print("Number is palindrome")
-else:
-    print("Number is not palindrome")
+print(','.join(result))
