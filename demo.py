@@ -1,9 +1,9 @@
-string = input("Enter a string: ")
-result = []
+string = input("Please enter string: ")
 
+res = []
 
 for i in range(len(string)):
-    for j in range(i + 1, len(string) +1 ):
-        result.append(string[i:j])
+    for j in range(i+ 1,len(string)):
+        res.append(string[i:j])
 
-print(','.join(result))
+print(','.join(res))
