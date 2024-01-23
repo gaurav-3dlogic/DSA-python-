@@ -1,12 +1,14 @@
-#reduce example
-from functools import reduce 
+a = 132
 
-a = [1,2,3,4,5,6,7,8,9]
+x = a
 
-def large(a,b):
-    if a > b:
-        return a 
-    else:
-        return b
-res = reduce(large,a)
-print(res)
+res = 0
+
+while a > 0:
+    res = res * 10 + a % 10
+    a = a // 10
+
+if res == x:
+    print("Number is palindrome")
+else:
+    print("Number is not palindrome")
