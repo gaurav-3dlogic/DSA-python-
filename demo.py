@@ -1,9 +1,14 @@
-string = input("Please enter string: ")
 
-res = []
+list1 = [4,1,5,2,4,5]
 
-for i in range(len(string)):
-    for j in range(i+ 1,len(string)):
-        res.append(string[i:j])
+duplicates = []
 
-print(','.join(res))
+
+for item in list1:
+    if list1.count(item) > 1:
+        if item not in duplicates:
+            duplicates.append(item)
+print(duplicates)
+
+
+
