@@ -1,14 +1,7 @@
-#possible substring
+res = [1,2,3,4,5,6,7,8,9,1,2]
 
-string = "U87TRW1L"
 
-char = []
-nums = []
-
-for i in string:
-    if i.isalpha():
-        char.append(i)
-    else:
-        nums.append(i)
-res = sorted(char) + sorted(nums)
-print(','.join(res))
+for item in res:
+    if res.count(item) > 1:
+        res.remove(item)
+print(res)
