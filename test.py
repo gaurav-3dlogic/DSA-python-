@@ -1,11 +1,8 @@
-#possible substring
+a = [1,2,3]
 
-a = "abc"
-res = []
+b = 0
 
 
-for i in range(len(a)):
-    for j in range(i+1,len(a)+1):
-        res.append(a[i:j])
-
-print(','.join(res))
+for i in a:
+    b += i
+print(b)
