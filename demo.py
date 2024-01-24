@@ -1,14 +1,14 @@
+#possible substring
 
-# list1 = [4,1,5,2,4,5]
+string = "U87TRW1L"
 
-# duplicates = []
+char = []
+nums = []
 
-
-# for item in list1:
-#     if list1.count(item) > 1:
-#         if item not in duplicates:
-#             duplicates.append(item)
-# print(duplicates)
-
-
-
+for i in string:
+    if i.isalpha():
+        char.append(i)
+    else:
+        nums.append(i)
+res = sorted(char) + sorted(nums)
+print(','.join(res))
