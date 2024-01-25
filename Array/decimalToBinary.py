@@ -1,9 +1,14 @@
-def convertBinary(n):
-    if n > 1:
-        convertBinary(n // 2)
-        print(n % 2, end = "")
+n = 6
+a = []
 
-dec = 5
 
-convertBinary(dec)
-print()
+while(n > 0):
+    dig = n % 2
+    a.append(dig)
+    n = n // 2
+
+print(a)
+
+a.reverse()
+for i in a:
+    print(i , end = "")
