@@ -1,13 +1,7 @@
-# duplicate number in list
-
-
-a = [1,2,3,4,5,6,1]
-res = []
-
-
-for i in a:
-    if a.count(i) > 1:
-        if i not in res:
-            res.append(i)
-
-print(res)
+list1 = [4,5,4,2,5,63,1,0]
+unique_list  = []
+for item in list1:
+    if item not in unique_list:
+        unique_list.append(item)
+        
+print(unique_list)
