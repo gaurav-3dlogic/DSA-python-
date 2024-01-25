@@ -1,7 +1,13 @@
-# res = [1,2,3,4,5,6,7,8,9,1,2]
+# duplicate number in list
 
 
-# for item in res:
-#     if res.count(item) > 1:
-#         res.remove(item)
-# print(res)
+a = [1,2,3,4,5,6,1]
+res = []
+
+
+for i in a:
+    if a.count(i) > 1:
+        if i not in res:
+            res.append(i)
+
+print(res)
