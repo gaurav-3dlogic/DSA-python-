@@ -1,16 +1,16 @@
-# n = 6
-# a = []
+n = 6
+a = []
 
 
-# while(n > 0):
-#     dig = n % 2
-#     a.append(dig)
-#     n = n // 2
+while(n > 0):
+    dig = n % 2
+    a.append(dig)
+    n = n // 2
 
 
-# a.reverse()
-# for i in a:
-#     print(i, end= "")
+a.reverse()
+for i in a:
+    print(i, end= "")
 
 
 list1 = [3,1,2,3,5]
