@@ -1,12 +1,14 @@
-n = 6
-res = []
+a = [1,2,3,4,5,6,7,8,9,10,1]
+b = []
+
+for i in a:
+    if a.count(i) > 1:
+        if i in a and i not in b:
+            b.append(i)
+print(b)
 
 
-while n > 0:
-    dig = n % 2
-    res.append(dig)
-    n = n // 2
 
-res.reverse()
-for i in res:
-    print(i,end = "")
+
+
+
