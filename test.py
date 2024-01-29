@@ -1,15 +1,15 @@
-n = 7
-res = []
+a = "Hey Gaurav what your problematic"
+
+b = a.split()
+
+longest_str = ""
 
 
+for i in b:
+    if len(i) > len(longest_str):
+        longest_str = i
+print(longest_str)
 
 
-while n > 0:
-    dig = n % 2
-    res.append(dig)
-    n = n // 2
-
-res.reverse()
-
-for i in res:
-    print(i,end = "")
+# Time complexity: O(n)
+# Space complexity: O(1)

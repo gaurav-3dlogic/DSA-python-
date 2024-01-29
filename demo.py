@@ -1,14 +1,15 @@
-a = [1,2,3,4,5,6,7,8,9,10,1]
-b = []
+a = "Hey Gaurav what your problemtic"
 
-for i in a:
-    if a.count(i) > 1:
-        if i in a and i not in b:
-            b.append(i)
-print(b)
+b = a.split()
+
+longest_str = ""
 
 
+for i in b:
+    if len(i) > len(longest_str):
+        longest_str = i
 
+print(longest_str)
 
-
-
+#Time complexity : 0(n)
+#Space complexity : 0(1)
