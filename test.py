@@ -1,20 +1,16 @@
-#nearest and upper
-b = [2, 3, 4, 5, 6,7, 8, 9, 10, 11]
-n = 7
+#sort list 
+
+a = [4,5,6,7,8,9,10,1,2,3]
+c = []
 
 
-lowest = 0
-upper = 0
+for i in range(len(a)):
+    m = a[0]
+    for j in a:
+        if j < m:
+            m = j
+    c.append(m)
+    a.remove(m)
+print(c)
 
 
-for i in b:
-    if i < n:
-        lowest = i
-print(lowest)
-
-
-for j in b:
-    if j > n:
-        upper = j
-        break
-print(upper)
