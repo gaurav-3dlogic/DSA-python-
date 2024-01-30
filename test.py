@@ -1,33 +1,20 @@
-# a = "Hey Gaurav what your problematic"
-
-# b = a.split()
-
-# longest_str = ""
+#nearest and upper
+b = [2, 3, 4, 5, 6,7, 8, 9, 10, 11]
+n = 7
 
 
-# for i in b:
-#     if len(i) > len(longest_str):
-#         longest_str = i
-# print(longest_str)
-
-
-# # Time complexity: O(n)
-# # Space complexity: O(1)
-
-
-
-a = "Hey Gaurav what your problematic"
-
-b = a.split()
-
-longest_str = ""
+lowest = 0
+upper = 0
 
 
 for i in b:
-    if len(i) > len(longest_str):
-        longest_str = i
-print(longest_str)
+    if i < n:
+        lowest = i
+print(lowest)
 
 
-# Time complexity: O(n)
-# Space complexity: O(1)
+for j in b:
+    if j > n:
+        upper = j
+        break
+print(upper)
