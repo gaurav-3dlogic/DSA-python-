@@ -1,15 +1,13 @@
-a = "Hey Gaurav what your problemtic"
+#longest string
 
-b = a.split()
+b = "hey gaurav how your love is not pythonww"
 
-longest_str = ""
+a = b.split()
 
+res = ""
 
-for i in b:
-    if len(i) > len(longest_str):
-        longest_str = i
+for i in a:
+    if len(i) > len(res):    
+        res = i
 
-print(longest_str)
-
-#Time complexity : 0(n)
-#Space complexity : 0(1)
+print(res)
