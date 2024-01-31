@@ -1,14 +1,14 @@
-n = int(input("Enter a number: "))
+a = "He who resposable who creadit the here who ans who"
+b = "who"
+
+pos = []
+count = 0
 
 
-a = 0
-b = 1
-z = 0
+for i in range(len(a)): 
+    if a[i:i + len(b)] == b:
+        pos.append(i)
+        count += 1
 
-
-while(n >= z):
-
-    print(z)
-    z = a + b
-    a = b
-    b = z
+print(pos)
+print(count)
