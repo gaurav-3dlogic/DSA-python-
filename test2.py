@@ -1,39 +1,17 @@
-#Fibonacci series
+from unittest import result
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+n = 7
+
+result = [(x,y) for x in a for y in a if x + y == n]
+
+print(result)
 
 
-# n = int(input("Enter a number: "))
-
-# a = 0
-# b = 1
-# z = 0
-
-# while(n >= z):
-#     print(z)
-#     z = a + b
-#     a = b
-#     b = z
+# for x in a:
+#     for y in a:
+#         if x + y == n:
+#             print(x,y)
 
 
-# def fibo(n):
-#     if n == 0:
-#         return 0
-#     elif n == 1:
-#         return 1
-#     else:
-#         return fibo(n-1) + fibo(n-2)
-
-# print(fibo(10))
-
-
-def fibonacci(n):
-    a = 0
-    b = 1
-    while n >= a:
-        yield a
-        a, b = b, a + b
-
-
-for i in fibonacci(100):
-    print(i)
 
 
