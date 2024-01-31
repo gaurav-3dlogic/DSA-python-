@@ -1,19 +1,23 @@
-from unittest import result
+def count_pairSum(arr,target):
+    num = {}
+    count = 0
 
 
-a = [5,2,1,4,0,2,45,3]
+    for i in arr:
+        c = target - i
+        if c in num:
 
-n = 7
+            count += num[c]
+        
 
-#First method
-result = [(x,y) for x in a for y in a if x + y == n]
+        if i in num:
+            num[i] += 1
+        else:
+            num[i] = 1
+    return count
 
-print(result)
+arr = [1,5,7,-1]
+target = 6
 
 
-
-#Second method
-for x in a:
-    for y in a:
-        if x + y == n:
-            print(x,y)
+print(count_pairSum(arr,target))
