@@ -1,24 +1,14 @@
-#sort list
-
-a = [7,8,9,10,1,2,3,4,5,6]
-b = []
+n = int(input("Enter a number: "))
 
 
-
-for i in range(len(a)):
-    m = a[0]
-    for j in a:
-        if j < m:
-            m = j
-    b.append(m)
-    a.remove(m)
-
-print(b)
-
-        
+a = 0
+b = 1
+z = 0
 
 
+while(n >= z):
 
-
-
-
+    print(z)
+    z = a + b
+    a = b
+    b = z
