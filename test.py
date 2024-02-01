@@ -1,23 +1,17 @@
-def count_pairSum(arr,target):
-    num = {}
-    count = 0
+# Python | Ways to remove a key from dictionary
+a = {"Gaurav":100,"saini":200,"python":500,"java":100}
+del a['Gaurav']
+print(a)
 
 
-    for i in arr:
-        c = target - i
-        if c in num:
 
-            count += num[c]
-        
+# Another way
+test_dict = {"Arushi": 22, "Anuradha": 21,
+             "Mani": 21, "Haritha": 21}
+new_dict = {key: val for key,
+            val in test_dict.items() if key != 'Mani'}
+ 
+# Printing dictionary after removal
+print("The dictionary after remove is : " + str(new_dict))
 
-        if i in num:
-            num[i] += 1
-        else:
-            num[i] = 1
-    return count
-
-arr = [1,5,7,-1]
-target = 6
-
-
-print(count_pairSum(arr,target))
+    
