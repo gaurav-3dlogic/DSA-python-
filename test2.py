@@ -1,32 +1,10 @@
-def find_pair_with_sum(arr, target_sum):
-    # Sort the array
-    arr.sort()
+# a = {"Gaurav":100,"saini":200,"python":500,"java":100}
+# del a["java"]
+# print(a)
 
-    # Initialize two pointers at both ends of the array
-    left, right = 0, len(arr) - 1
 
-    while left < right:
-        current_sum = arr[left] + arr[right]
+#Another example
+test_dict = {"banana":10,"Mango":20,"chinese":12,"spanish":100}
+res = {key: val for key, val in test_dict.items() if key != "banana"}
+print(res)
 
-        if current_sum == target_sum:
-            # Pair found
-            return arr[left], arr[right]
-        elif current_sum < target_sum:
-            # Move left pointer to increase the sum
-            left += 1
-        else:
-            # Move right pointer to decrease the sum
-            right -= 1
-
-    # Pair not found
-    return None
-
-# Example usage:
-arr = [2, 7, 11, 15]
-target = 9
-result = find_pair_with_sum(arr, target)
-
-if result:
-    print(f"Pair with sum {target}: {result}")
-else:
-    print("No pair found")
