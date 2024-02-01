@@ -1,7 +1,12 @@
-a = {"python":1,"java":2 ,"js":4}
+# Extract Unique values dictionary values
+a = {"Gaurav":100,"saini":200,"python":500,"java":100}
+
+r = []
 
 
-res = {key:value for key, value in a.items() if key != "js"}
-
-
-print(res)
+for key,value in a.items():
+    if value not in r:
+        r.append(value)
+        
+print(r)
+    
