@@ -1,10 +1,7 @@
-# a = {"Gaurav":100,"saini":200,"python":500,"java":100}
-# del a["java"]
-# print(a)
+a = {"python":1,"java":2 ,"js":4}
 
 
-#Another example
-test_dict = {"banana":10,"Mango":20,"chinese":12,"spanish":100}
-res = {key: val for key, val in test_dict.items() if key != "banana"}
+res = {key:value for key, value in a.items() if key != "js"}
+
+
 print(res)
-
