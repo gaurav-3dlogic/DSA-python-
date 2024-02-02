@@ -1,12 +1,16 @@
-# Extract Unique values dictionary values
-a = {"Gaurav":100,"saini":200,"python":500,"java":100}
-
-r = []
+a = 1678
 
 
-for key,value in a.items():
-    if value not in r:
-        r.append(value)
-        
-print(r)
-    
+x = a
+
+res = 0
+
+
+while(a > 0):
+    res = res * 10 + a % 10
+    a = a // 10
+
+if(x == res):
+    print("Palindrome")
+else:
+    print("Not Palindrome")
