@@ -1,10 +1,16 @@
-# c = "gaurav love good internet of things"
-# a = c.split()
+# Number is binary or not
 
-# b = ""
+num = input("Enter a number: ")
 
-
-# for i in a:
-#     if len(i) > len(b):
-#         b = i
-# print(b)
+# check each digit of the number 
+for i in range(len(num)): 
+	
+	# check if digit is 0 or 1 
+	if num[i] not in "01": 
+		
+		# print result 
+		print("No, the number is not binary")
+		break
+		
+else: 
+	print("Yes, the number is binary")
