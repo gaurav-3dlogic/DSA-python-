@@ -1,16 +1,9 @@
-# a = 1678
+num = input("Enter the number: ")
 
 
-# x = a
-
-# res = 0
-
-
-# while(a > 0):
-#     res = res * 10 + a % 10
-#     a = a // 10
-
-# if(x == res):
-#     print("Palindrome")
-# else:
-#     print("Not Palindrome")
+for i in range(len(num)):
+    if num[i] not in "01":
+        print("No its not a Binary")
+        break
+else:
+    print("Number is binary")
