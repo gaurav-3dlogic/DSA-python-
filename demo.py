@@ -1,14 +1,9 @@
-# a = "He who resposable who creadit the here who ans who"
-# b = "who"
-
-# pos = []
-# count = 0
+num = input("Enter a number: ")
 
 
-# for i in range(len(a)): 
-#     if a[i:i + len(b)] == b:
-#         pos.append(i)
-#         count += 1
-
-# print(pos)
-# print(count)
+for i in range(len(num)):
+    if num[i] not in "01":
+        print("Number is not Binary")
+        break
+else:
+    print("Number is Binary")
