@@ -1,16 +1,23 @@
-# Number is binary or not
+from abc import ABC, abstractmethod
+class Company(ABC):
+    
 
-num = input("Enter a number: ")
+	def work(self):
+		pass
 
-# check each digit of the number 
-for i in range(len(num)): 
-	
-	# check if digit is 0 or 1 
-	if num[i] not in "01": 
-		
-		# print result 
-		print("No, the number is not binary")
-		break
-		
-else: 
-	print("Yes, the number is binary")
+class Manager(Company):
+
+
+	def work(self):
+		print("I assign work to team and manage team")
+
+class Employee(Company):
+
+	def work(self):
+		print("I complete the work assigned to me")
+R = Manager()
+R.work()
+
+k = Employee()
+k.work()
+
