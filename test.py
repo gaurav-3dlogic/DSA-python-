@@ -1,23 +1,15 @@
-from abc import ABC, abstractmethod
-class Company(ABC):
-    
+class Cat:
 
-	def work(self):
-		pass
+    def __init__(self):
+        self.__sound = "meow"
 
-class Manager(Company):
+    def speak(self):
+        print(f"Cat says: {(self.__sound)}")
 
 
-	def work(self):
-		print("I assign work to team and manage team")
+c = Cat()
+c.speak()
 
-class Employee(Company):
-
-	def work(self):
-		print("I complete the work assigned to me")
-R = Manager()
-R.work()
-
-k = Employee()
-k.work()
-
+# change the price
+c.sound = "bow-wow"
+c.speak()
