@@ -1,9 +1,20 @@
-# num = input("Enter the number: ")
+counter = 1
+
+c = 0
 
 
-# for i in range(len(num)):
-#     if num[i] not in "01":
-#         print("No its not a Binary")
-#         break
-# else:
-#     print("Number is binary")
+
+
+def printer(name):
+   
+    global counter,c
+    if counter <= 10:
+        c += 1
+        print(name)
+      
+        counter += 1
+
+        printer(name)
+
+printer(counter)
+print(c)
