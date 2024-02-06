@@ -6,6 +6,8 @@ def printer(name):
     if counter <= 10:
         print(name)
         counter += 1
+       
         printer(name)
         
-printer("Gaurav")
+        
+printer(counter)
