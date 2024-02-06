@@ -1,15 +1,13 @@
-class Cat:
+# def least_common_multiple(a, b):
+#     if a > b:
+#         greater = a
+#     elif b > a:
+#         greater = b
+#     while(True):
+#         if ((greater % a == 0) and (greater % b == 0)):
+#             lcm = greater
+#             break
+#         greater = greater + 1
+#     return lcm
 
-    def __init__(self):
-        self.__sound = "meow"
-
-    def speak(self):
-        print(f"Cat says: {(self.__sound)}")
-
-
-c = Cat()
-c.speak()
-
-# change the price
-c.sound = "bow-wow"
-c.speak()
+# print(least_common_multiple(10, 12))
