@@ -1,13 +1,11 @@
-def least_common_multiple(a, b):
-    if a > b:
-        greater = a
-    elif b > a:
-        greater = b
-    while(True):
-        if ((greater % a == 0) and (greater % b == 0)):
-            lcm = greater
-            break
-        greater = greater + 1
-    return lcm
+counter = 1
 
-print(least_common_multiple(10, 12))
+
+def printer(name):
+    global counter
+    if counter <= 10:
+        print(name)
+        counter += 1
+        printer(name)
+        
+printer("Gaurav")
