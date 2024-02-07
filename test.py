@@ -1,11 +1,11 @@
-def countString(s):
-    d = {}
-    for i in s:
-        if i in d:
-            d[i] += 1
-        else:
-            d[i] = 1
-    return d
+a = 12345
 
-s = "printgame"
-print(countString(s))
+
+a_str = str(a)
+
+sum_digit = 0
+
+
+for i in a_str:
+    sum_digit += int(i) 
+print(sum_digit)

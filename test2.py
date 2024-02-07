@@ -1,12 +1,9 @@
-a = [1,2,3,4,5,6,7,8,9]
+#Find length of list
+a = [1, 2, 3, 4, 5]
+c = 0
 
-# a[0] ,a[-1] = a[-1],a[0]
 
-# print(a)
+for i in a:
+    c += 1
+print(c)
 
-temp = 0
-temp = a[0]
-a[0] = a[-1]
-a[-1] = temp
-
-print(a)
