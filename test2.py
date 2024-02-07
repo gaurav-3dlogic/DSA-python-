@@ -1,9 +1,9 @@
 a = 12345
 b = str(a)
-r = 0
 
 
 
+r = ""
 for i in b:
-    r += int(i)
+    r = i + r
 print(r)
