@@ -1,9 +1,9 @@
-#Find length of list
-a = [1, 2, 3, 4, 5]
-c = 0
+a = 12345
+b = str(a)
+r = 0
 
 
-for i in a:
-    c += 1
-print(c)
 
+for i in b:
+    r += int(i)
+print(r)
