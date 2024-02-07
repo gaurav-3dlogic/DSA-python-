@@ -1,11 +1,13 @@
+#Reverse a number
+
+
 a = 12345
 
-
-a_str = str(a)
-
-sum_digit = 0
+res = 0
 
 
-for i in a_str:
-    sum_digit += int(i) 
-print(sum_digit)
+while a > 0:
+    res = res * 10 + a % 10
+    a = a // 10
+
+print(res)
