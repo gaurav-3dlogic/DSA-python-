@@ -1,13 +1,8 @@
-#Reverse a number
+string = 'I like to eat apples'
+string[:6] #=> 'I like'
+string[7:13] #=> 'to eat'
+string[0:-1:2] #=> 'Ilk oetape' (every 2nd character)
 
-
-a = 12345
-
-res = 0
-
-
-while a > 0:
-    res = res * 10 + a % 10
-    a = a // 10
-
-print(res)
+print(string[:6])
+print(string[7:13])
+print(string[0:-1:2])
