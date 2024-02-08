@@ -1,11 +1,10 @@
-a = [10,8,9,-19,9,-2,-1,7]
+def long_word(n,s):
+    b = s.split(' ')
+    long_word = []
+    for i in b:
+        if len(i) > n:
+            long_word.append(i)
+    return long_word
+print(long_word(3,"hey there you are where"))
 
 
-p , n = 0 , 0
-
-for i in a:
-    if i > 0:
-        p += 1
-    else:
-        n += 1
-print(p,n)
