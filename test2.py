@@ -1,9 +1,10 @@
-def long_word(n,str):
-    b = str.split(' ')
-    word_len = []
-    for i in b:
-        if len(i) > n:
-            word_len.append(i)
-    return word_len
+d = {
+    'ravi': 10,"sorca":8,"sherca":90,"jeo":80
+}
 
-print(long_word(4,"Hey there my name is veerpal"))
+myKeys = list(d.keys())
+myKeys.sort()
+sorted_dict = {i: d[i] for i in myKeys}
+
+
+print(sorted_dict)
