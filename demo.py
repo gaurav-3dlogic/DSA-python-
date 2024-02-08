@@ -1,19 +1,17 @@
-def least_common_multiple(a,b):
-    if a >= b:
-        greater = a
-    elif b >= a:
-        greater = b
-    while(True):
-        if ((greater % a == 0)) and (greater % b == 0):
-            lcm = greater
-            break
-        greater = greater + 1
-    return lcm
+# reverse array /
 
-a = 10
-b = 10
-print(least_common_multiple(a,b))
-            
-        
 
+
+
+
+def reverseList(a):
+    start = 0
+    end = len(a) - 1
+    while start <= end:
+        a[start],a[end] = a[end],a[start]
+        start += 1
+        end -= 1
+    return a
+a = [1,2,3,4,5,6,7,8,9]
+print(reverseList(a))
 

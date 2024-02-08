@@ -1,8 +1,11 @@
-string = 'I like to eat apples'
-string[:6] #=> 'I like'
-string[7:13] #=> 'to eat'
-string[0:-1:2] #=> 'Ilk oetape' (every 2nd character)
+a = [10,8,9,-19,9,-2,-1,7]
 
-print(string[:6])
-print(string[7:13])
-print(string[0:-1:2])
+
+p , n = 0 , 0
+
+for i in a:
+    if i > 0:
+        p += 1
+    else:
+        n += 1
+print(p,n)
