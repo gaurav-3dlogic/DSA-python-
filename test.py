@@ -1,10 +1,9 @@
-def long_word(n,s):
-    b = s.split(' ')
-    long_word = []
-    for i in b:
-        if len(i) > n:
-            long_word.append(i)
-    return long_word
-print(long_word(3,"hey there you are where"))
 
-
+d = {'ravi': 10, 'rajnish': 9,
+        'sanjeev': 15, 'yash': 2, 'suraj': 32}
+ 
+myKeys = list(d.keys())
+myKeys.sort()
+sorted_dict = {i: d[i] for i in myKeys}
+ 
+print(sorted_dict)
