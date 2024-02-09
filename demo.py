@@ -1,17 +1,16 @@
-# reverse array /
+a = [2, 3, 4, 5, 0, 1]
+n = 5
 
+def pairSum(a, n):
+    pairs = []
+    d = {}
 
+    for i in range(len(a)):
+        p = n - a[i]
+        if p in d:
+            pairs.append([p, a[i]])
+        d[a[i]] = i
 
+    return pairs
 
-
-def reverseList(a):
-    start = 0
-    end = len(a) - 1
-    while start <= end:
-        a[start],a[end] = a[end],a[start]
-        start += 1
-        end -= 1
-    return a
-a = [1,2,3,4,5,6,7,8,9]
-print(reverseList(a))
-
+print(pairSum(a, n))
