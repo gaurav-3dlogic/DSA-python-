@@ -1,9 +1,11 @@
-a = 12345
-b = str(a)
-sumi = 0
+#count pos and neg number
 
+a = [1,2,-2,-9,1,2,-7]
+neg,pos = 0,0
 
-
-for i in b:
-    sumi += int(i)
-print(sumi)
+for i in a:
+    if i < 0:
+        neg += 1
+    else:
+        pos += 1
+print(neg,pos)
