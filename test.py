@@ -1,11 +1,7 @@
-#count pos and neg number
+#find the index of list
 
-a = [1,2,-2,-9,1,2,-7]
-neg,pos = 0,0
+a = [5,1,2,3,7]
 
-for i in a:
-    if i < 0:
-        neg += 1
-    else:
-        pos += 1
-print(neg,pos)
+
+for a , i in enumerate(a):
+    print(a,i)
