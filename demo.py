@@ -1,11 +1,8 @@
-def countN(n,str):
-
-    b = str.split(' ')
+def wordCOunt(n,str):
+    a = str.split(' ')
     res = []
-
-    for i in b:
+    for i in a:
         if len(i) > n:
             res.append(i)
     return res
-
-print(countN(2,"Hey fay gayrav u rtar"))
+print(wordCOunt(3,"Hey Bro what happened"))
