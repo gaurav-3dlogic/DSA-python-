@@ -1,6 +1,11 @@
-b = 1234
-a = str(b)
-sum = 0
-for i in a:
-    sum += int(i)
-print(sum)
+def countN(n,str):
+
+    b = str.split(' ')
+    res = []
+
+    for i in b:
+        if len(i) > n:
+            res.append(i)
+    return res
+
+print(countN(2,"Hey fay gayrav u rtar"))
