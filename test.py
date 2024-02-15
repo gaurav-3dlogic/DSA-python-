@@ -1,16 +1,30 @@
 
-# def pairSum(a,n):
-#     pairs = []
-#     d = {}
+#first approch
+a = [12, 35, 9, 56, 24]
 
-#     for i in range(len(a)):
-#         p = n - a[i]
-#         if p in d:
-#             pairs.append([p,a[i]])
-#         d[a[i]] = i 
-#     return pairs
+temp = a[0]
+a[0] = a[-1]
+a[-1] = temp
 
-# a = [2, 3, 4, 5, 6,0,1]
-# n = 5
+print(a)
 
-# print(pairSum(a,n))
+
+#second approch
+a = [12, 35, 9, 56, 24]
+
+temp = a[0] ,a[-1]
+
+a[-1],a[0] = temp
+
+print(a)
+
+
+#Third approch
+
+a = [12, 35, 9, 56, 24]
+a[0] ,a[-1] = a[-1],a[0]
+print(a)
+
+
+
+
