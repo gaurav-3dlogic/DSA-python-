@@ -1,3 +1,6 @@
-a = [12,10,11,12,90]
-a[0],a[-1] = a[-1],a[0]
-print(a)
+b = 1234
+a = str(b)
+sum = 0
+for i in a:
+    sum += int(i)
+print(sum)
