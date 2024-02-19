@@ -1,19 +1,28 @@
-# #Sort01
+def binary_search(arr, target):
+    
+    left, right = 0, len(arr) - 1
 
+    while left <= right:
+        
+        mid = (left + right) // 2
 
-# def sort012(arr):
-#     l,m,h = 0,0, len(arr) -1 
-#     while(m <= h):
-#         if arr[m] == 0:
-#             arr[l] , arr[m] = arr[m] , arr[l]
-#             l += 1
-#             m += 1
-#         elif arr[m] == 1:
-#             m += 1
-#         else:
-#             arr[m] , arr[h] = arr[h] , arr[m]
-#             h -= 1
-#     return arr
+        if arr[mid] == target:
+            return mid
+        
+        elif arr[mid] > target:
+            right = mid - 1
+        
+        else:
+            left = mid + 1
 
-# arr = [2,1,0,0,1,2]
-# print(sort012(arr))
+    
+    return -1
+
+sorted_list = [2, 5, 8, 12, 16, 23, 38, 45, 56, 72, 91]
+target_element = 23
+
+result = binary_search(sorted_list, target_element)
+if result != -1:
+    print(f"Element {target_element} found at index {result}.")
+else:
+    print(f"Element {target_element} not found in the list.")
