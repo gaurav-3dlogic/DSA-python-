@@ -1,21 +1,17 @@
-#Sort01
+#Find the maximum and minimum element in an array	
+arr = [50,10,12,34,21,67]
 
 
-def sort01(arr):
-    low,mid, high = 0,0,len(arr) - 1
-    while mid <= high:
-        if arr[mid] == 0:
-            arr[low] , arr[mid] = arr[mid], arr[low]
-            low += 1
-            mid += 1
-        elif arr[mid] == 1:
-            mid += 1
-        else:
-            arr[high] , arr[mid] = arr[mid], arr[ high]
-            high -= 1
-    return arr
-arr = [2,0,1,1,2,0]
+def findMin(arr):
+    m = arr[0]
+    n = arr[0]
+   
+    for i in arr:
+        if i < m:
+            m = i 
+        elif i > m:
+            n = i
+    print(f"Max num is {n} and min num is {m}")
 
-print(sort01(arr))
+findMin(arr)            
 
-        
