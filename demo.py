@@ -1,14 +1,16 @@
-def MinMin(dict):
-    maxVal = float("-Inf")
-    minVal = float("Inf")
+arr = [2,1,0,2,1,0,2,1]
 
-    for k, v in dict.items():
-        if v > maxVal:
-            maxVal = v
-        if v < minVal:
-            minVal = v
-    return maxVal, minVal
-
-dict = {"a":1,"b" : 2,"c":3 }
-
-print(MinMin(dict))
+def Sort01(arr):
+    low,mid,high = 0,0,len(arr) - 1
+    while mid < high:
+        if arr[mid] == 0:
+            arr[low],arr[mid] = arr[mid],arr[low]
+            mid += 1
+            low += 1
+        elif arr[mid] == 1:
+            mid += 1
+        else:
+            arr[mid],arr[high] = arr[high],arr[mid]
+            high -= 1
+    return arr
+print(Sort01(arr))
