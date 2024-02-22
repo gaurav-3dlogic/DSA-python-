@@ -1,7 +1,21 @@
-#Find the “Kth” max and min element of an array	
-a = [1,2,3,4,5,6,7,8,9,10,11]
-n = 3
+#Move all the negative elements to one side of the array	
 
-print(a[n-1])
-print(a[-n])
+arr = [1,2,-2,1,0,-10,-9,1,7]
+
+
+
+
+
+def MoveAllNeg(arr):
+    nonZero = 0
+    for i in range(len(arr)):
+        if arr[i] != 0:
+            arr[nonZero] , arr[i] = arr[i] , arr[nonZero]
+            nonZero += 1
+
+
+MoveAllNeg(arr) 
+print(arr)
+            
+
 
