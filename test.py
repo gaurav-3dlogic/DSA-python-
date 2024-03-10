@@ -1,23 +1,24 @@
-#Test
-# #Move all the negative elements to one side of the array	
-# #This is test file
+a = {
+"content":[
+{
+"attachment":{
+"href":"cid:63f5e4909ca9205450a40030",
+"len":4,
+"name":"Checklist_Ericsson_PKC_INM_CGNAT.txt",
+"type":"text/plain",
+"xmime:contentType":"text/plain"
+}
+},
+{
+"attachment":{
+"href":"cid:642d4b2aceab0054508de410",
+"len":10338,
+"name":"dump.csv",
+"type":"application/octet-stream",
+"xmime:contentType":"application/octet-stream"
+}
+}
+]
+}
 
-# arr = [1,2,-2,1,0,-10,-9,1,7]
-
-
-
-
-
-# def MoveAllNeg(arr):
-#     nonZero = 0
-#     for i in range(len(arr)):
-#         if arr[i] > 0 :
-#             arr[nonZero] , arr[i] = arr[i] , arr[nonZero]
-#             nonZero += 1
-#     return arr
-
-# MoveAllNeg(arr) 
-# print(arr)
-            
-
-
+print(a['content'][0]['attachment']['name'])
