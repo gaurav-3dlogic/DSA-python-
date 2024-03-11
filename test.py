@@ -1,14 +1,6 @@
-# Reverse String 
-arr = [1,2,3,4,6]
+a = [1,2,3,4,5,6,7,9]
 
-n = arr[0]
+k = 3
 
-m = arr[0]
-for i in arr:
-    if i < m:
-        m = i 
-    else:
-        n = i 
-
-print(m)
-print(n)
+print(a[k -1])
+print(a[-k])
