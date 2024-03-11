@@ -1,24 +1,10 @@
-# a = {
-# "content":[
-# {
-# "attachment":{
-# "href":"cid:63f5e4909ca9205450a40030",
-# "len":4,
-# "name":"Checklist_Ericsson_PKC_INM_CGNAT.txt",
-# "type":"text/plain",
-# "xmime:contentType":"text/plain"
-# }
-# },
-# {
-# "attachment":{
-# "href":"cid:642d4b2aceab0054508de410",
-# "len":10338,
-# "name":"dump.csv",
-# "type":"application/octet-stream",
-# "xmime:contentType":"application/octet-stream"
-# }
-# }
-# ]
-# }
-
-# print(a['content'][0]['attachment']['name'])
+# Reverse String 
+def reverse_string(arr):
+    start , end = 0, len(arr) -1
+    while start < end:
+        arr[start], arr[end] = arr[end], arr[start]
+        start += 1
+        end -= 1
+    return arr
+arr = [1,2,3]
+print(reverse_string(arr))
