@@ -1,11 +1,12 @@
-a = [1, 2, 4, 5, 6, 6]
-b = [4, 5, 6, 7, 8, 6]
-c = []
+arr = [1, 2, 4, 5, 6, 6]
 
-for i in a:
-    if i not in c:
-        c.append(i)
-for i in b:
-    if i not in c:
-        c.append(i)
-print(c)
+
+def cyclic(arr):
+    n = len(arr)
+    last_ele = arr[-1]
+    for i in range(n-1,0,1):
+        arr[i] = arr[i-1]
+    arr[0] = last_ele
+
+cyclic(arr)
+print(arr)

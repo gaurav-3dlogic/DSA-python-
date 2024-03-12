@@ -12,4 +12,4 @@ def cyclically_rotate_array(arr):
 
 arr = [1,2,3,4,5,6,7,8]
 cyclically_rotate_array(arr)
-print(arr)
+print(arr)  
