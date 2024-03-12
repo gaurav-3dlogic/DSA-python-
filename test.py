@@ -1,15 +1,15 @@
-#Move all negitive number one side
+
 arr = [1,-2,3,-9,10,-3,-5,6,0]
 
-def moveOneSide(arr):
-
-    j = 0 
+def allElementRights(arr):
     n = len(arr)
-
+    j = 0
 
     for i in range(n):
         if arr[i] < 0:
-            arr[i] , arr[j] = arr[j] , arr[i]
+            arr[j],arr[i] = arr[i],arr[j]
             j += 1
     return arr
-print(moveOneSide(arr))
+print(allElementRights(arr))
+
+
