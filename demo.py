@@ -7,7 +7,8 @@ c = []
 for i in a:
     if i not in c:
         c.append(i)
-for i in b:
-    if i not in c:
-        c.append(i)
+
+for j in b:
+    if  j not in c:
+        c.append(j)
 print(c)
