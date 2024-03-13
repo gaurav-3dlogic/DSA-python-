@@ -1,12 +1,13 @@
-arr = [1, 2, 4, 5, 6]
+#Union and interset of two sorted array:-
+a = [1,2,3,4,5,4,5]
+b = [4,4,5,6,7,7,7]
 
+c = []
 
-def cyclic(arr):
-    n = len(arr)
-    last_ele = arr[-1]
-    for i in range(n-1,0,-1):
-        arr[i] = arr[i-1]
-    arr[0] = last_ele
-
-cyclic(arr)
-print(arr)
+for i in a:
+    if i not in c:
+        c.append(i)
+for i in b:
+    if i not in c:
+        c.append(i)
+print(c)
