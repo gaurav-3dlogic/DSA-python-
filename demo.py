@@ -4,11 +4,19 @@ b = [4,4,5,6,7,7,7]
 
 c = []
 
-for i in a:
-    if i not in c:
-        c.append(i)
+# for i in a:
+#     if i not in c:
+#         c.append(i)
 
-for j in b:
-    if  j not in c:
-        c.append(j)
+# for j in b:
+#     if  j not in c:
+#         c.append(j)
+# print(c)
+
+#interset 
+
+for i in a:
+    if i in b and not i in c:
+        c.append(i)
 print(c)
+
