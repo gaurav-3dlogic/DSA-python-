@@ -1,18 +1,14 @@
-arr = [1,2,3,4,6]
+#kadane algo
+arr = [1,-2,3,4,-6,7,1]
 
-def kadaneAlgo(arr):
+def kadane(arr):
+    sum = 0
     maxSum = 0
-    sum = 0 
     for i in range(len(arr)):
-        sum += arr[i]
-        maxSum = max(maxSum, sum)
-
+        sum +=  arr[i] 
+        maxSum = max(maxSum,sum)
 
         if sum < 0:
             sum = 0
-    return sum 
-print(kadaneAlgo(arr))
-
-
-
-
+    return maxSum
+print(kadane(arr))
