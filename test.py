@@ -1,14 +1,12 @@
-#kadane algo
-arr = [1,-2,3,4,-6,7,1]
+#CYCLIC ROTATE
+a = [1,2,3,5,6]
 
-def kadane(arr):
-    sum = 0
-    maxSum = 0
-    for i in range(len(arr)):
-        sum +=  arr[i] 
-        maxSum = max(maxSum,sum)
+def cyclic(arr):
+    last_ele = arr[-1]
+    for i in range(len(arr)-1,0,-1):
+        arr[i] = arr[i - 1]
+    a[0] = last_ele
 
-        if sum < 0:
-            sum = 0
-    return maxSum
-print(kadane(arr))
+    return arr
+cyclic(a)
+print(a)

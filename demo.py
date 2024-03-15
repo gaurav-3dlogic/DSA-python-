@@ -1,20 +1,19 @@
-# arr = [1,-2,0,3,4,5,7]
+#cyclic rotate
 
+a = [1,2,3,4,5,6]
 
-def kadane(arr):
-    sum = 0
-    maxSum = 0
-    for i in range(len(arr)):
-        sum += arr[i]
-        maxSum = max(maxSum, sum)
+def cyclic_rotate(a):
 
-        if sum < 0:
+    last_ele = a[-1]
 
-            sum = 0
+    for i in range(len(a) - 1,0,-1):
+        a[i] = a[i - 1]
 
-    return maxSum
+    a[0] = last_ele
 
-print(kadane(arr))
+a = [1,2,3,4,5,6]
+cyclic_rotate(a)
+print(a)
 
 
 
