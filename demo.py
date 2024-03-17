@@ -1,20 +1,22 @@
-#cyclic rotate
+#sort01
 
-# a = [1,2,3,4,5,6]
+def sort01(arr):
+    low,mid,high = 0,0,len(arr) -1 
 
-# def cyclic_rotate(a):
+    while mid <= high:
+        if arr[mid] == 0:
+            arr[low],arr[mid] = arr[mid],arr[low]
+            low += 1
+            mid += 1
 
-#     last_ele = a[-1]
+        elif arr[mid] == 1:
+            mid += 1
+        else:
+            arr[mid] , arr[high] = arr[high],arr[mid]
+            high -= 1
 
-#     for i in range(len(a) - 1,0,-1):
-#         a[i] = a[i - 1]
+    return arr
 
-#     a[0] = last_ele
-
-# a = [1,2,3,4,5,6]
-# cyclic_rotate(a)
-# print(a)
-
-
-
-
+arr = [2,1,0,0,1,2,1,0,0]
+print(sort01(arr))
+            
