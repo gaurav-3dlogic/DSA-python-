@@ -1,16 +1,14 @@
-# def pairSum(a, n):
-#     pairs = []
-#     d = {}
+arr = [1,-2,2,1,0,-4]
 
-#     for i in range(len(a)):
-#         p = n - a[i]
-#         if p in d:
-#             pairs.append([p, a[i]])
-#         else:
-#             d[a[i]] = i
+def kadaneAlgo(arr):
+    sum = 0
+    maxSum = 0
 
-#     return pairs
+    for i in range(len(arr)):
+        sum += arr[i]
+        maxSum = max(maxSum, sum)
 
-# a = [2, 3, 4, 5, 0, 1]
-# n = 5
-# print(pairSum(a, n))
+        if sum < 0:
+            sum = 0
+    return maxSum
+print(kadaneAlgo(arr))
