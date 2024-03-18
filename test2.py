@@ -1,11 +1,17 @@
-n = int(input("Enter a number: "))
+def pairSum(a,n):
+    pair = []
+    d = {}
 
-if n > 1:
-    for i in range(2,n):
-        if n % i == 0:
-            print("Number is not prime")
-            break
-    else:
-        print("Number is prime")
-else:
-    print("Number is not prime")
+
+    for i in range(len(a)):
+        p = n - a[i]
+        if p in d:
+            pair.append(pair)
+        else:
+            d[a[i]] = i
+    return pair
+
+a = [2,3,4,5,6,7,8,9,10]
+n = 5
+print(pairSum(a,n))
+
