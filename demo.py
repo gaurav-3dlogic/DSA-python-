@@ -1,14 +1,16 @@
-arr = [1,-2,2,1,0,-4]
+n = int(input("Enter a number: "))
 
-def kadaneAlgo(arr):
-    sum = 0
-    maxSum = 0
+if n > 1:
+    is_prime = True  # Assume n is prime initially
 
-    for i in range(len(arr)):
-        sum += arr[i]
-        maxSum = max(maxSum, sum)
+    for i in range(2, n):
+        if n % i == 0:
+            is_prime = False  # If n is divisible by any number in the range, it's not prime
+            break
 
-        if sum < 0:
-            sum = 0
-    return maxSum
-print(kadaneAlgo(arr))
+    if is_prime:
+        print("Number is prime")
+    else:
+        print("Number is not prime")
+else:
+    print("Number is not prime")
