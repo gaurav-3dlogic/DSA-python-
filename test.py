@@ -1,9 +1,11 @@
-arr = [1,2,3,4,5]
-def cyclic(arr):
-    last_ele = arr[-1]
-    for i in range(len(arr)-1,0,-1):
-        arr[i] = arr[i- 1]
-    arr[0] = last_ele
+#pair of sum
+a = [1,5,0,2,4,1,3,10,-5]
+n = 5
 
-cyclic(arr)
-print(arr)
+res = []
+
+for i in range(len(a)):
+    for j in range(len(a),i+1):
+        if a[i] + a[j] == n:
+            res.append(a[i],a[j])
+print(res)
