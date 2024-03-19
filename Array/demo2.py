@@ -1,13 +1,11 @@
-#prime
+#Sort list without using sort function
+a = [12,10,23,-9,2,1]
 
-n = int(input("Enter the number:  "))
+for i in range(len(a)):
+    for j in range(i+1,len(a)):
+        if a[i] > a[j]:
+            a[i] , a[j] = a[j], a[i]
 
-if n > 1:
-    for i in range(2,n):
-        if n % i == 0:
-            print("Number is not prime")
-            break
-    else:
-        print("Number is prime")
-else:
-    print("Number is not prime")
+print(a)
+
+
