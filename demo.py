@@ -1,12 +1,16 @@
-n = int(input("Enter a number: "))
+arr = [1,3,4,2,10,-5]
+target = 5
+pairs = []
+d = {}
 
-if n > 1:
-    for i in range(2,n):
-        if n % i == 0:
-            print("Number is not prime")
-            break
-    else:
-        print("Number is prime")
 
-else:
-    print("Number is not prime")
+
+def pairOfSum(arr,target):
+    for i in range(len(arr)):
+        p = target - arr[i]
+        if p in d:
+            pairs.append(p,[arr[i]])
+        else:
+            p = arr[i]
+    return pairs
+print(pairOfSum(arr,target))

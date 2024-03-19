@@ -1,16 +1,15 @@
-def pairSum(a, n):
+def pairSum(arr,target):
     pairs = []
     d = {}
 
-    for i in range(len(a)):
-        p = n - a[i]
+    for i in range(len(arr)):
+        p = target - arr[i]
         if p in d:
-            pairs.append([p, a[i]])
+            pairs.append([p,arr[i]])
         else:
-            d[a[i]] = i
-
+            d[arr[i]] = i
     return pairs
 
-a = [2, 3, 4, 5, 0, 1]
-n = 5
-print(pairSum(a, n))
+arr = [5,1,4,3,7,8,9,3,21,2,6,5,4]
+target = 8
+print(pairSum(arr, target))
