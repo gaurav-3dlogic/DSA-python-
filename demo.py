@@ -1,9 +1,5 @@
 arr = [1,3,4,2,10,-5]
 target = 5
-
-
-
-
 def pairOfSum(arr,target):
     pairs = []
     d = {}
