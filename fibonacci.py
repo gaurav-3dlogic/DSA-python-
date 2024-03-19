@@ -33,15 +33,30 @@
 #Third Apporach 
 
 
-n = int(input("Enter a number: "))
+# n = int(input("Enter a number: "))
 
-a = 0
-b = 1
-z = 0
+# a = 0
+# b = 1
+# z = 0
 
-while(n >= z):
-    print(z)
-    z = a + b
-    a = b
-    b = z
+# while(n >= z):
+#     print(z)
+#     z = a + b
+#     a = b
+#     b = z
 
+
+#Generate an infanite fibonacci series by using generator
+
+def fibonacci():
+    a,b = 0,1
+    while True:
+        yield a
+        a,b = b, a + b
+
+f1 = fibonacci()
+print(next(f1))
+print(next(f1))
+print(next(f1))
+print(next(f1))
+print(next(f1))
