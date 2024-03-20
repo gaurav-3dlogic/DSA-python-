@@ -1,10 +1,10 @@
-#sort list without using any built in functions
+# n = 20 
 
-# a = [10,1,-9,-6,12,2]
 
-# for i in range(len(a)):
-#     for j in range(i+1,len(a)):
-#         if a[i] > a[j]:
-#             a[i] , a[j] = a[j], a[i]
-
-# print(a)
+# for i in range(1,n):
+#     for j in range(2,i//2):
+#         if i % j == 0:
+#             break
+#     else:
+#         print(i)
+            
