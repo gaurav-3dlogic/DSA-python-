@@ -1,16 +1,10 @@
-arr = [1,3,4,2,10,-5]
-target = 5
+#sort list without using any built in functions
 
+# a = [10,1,-9,-6,12,2]
 
-def pairSum(arr,target):
-    pairs = []
-    d = {}
-    for i in range(len(arr)):
-        p = target - arr[i]
-        if p in d:
-            pairs.append([p,arr[i]])
-        else:
-            d[arr[i]] = i
-    return pairs
+# for i in range(len(a)):
+#     for j in range(i+1,len(a)):
+#         if a[i] > a[j]:
+#             a[i] , a[j] = a[j], a[i]
 
-print(pairSum(arr,target))
+# print(a)
