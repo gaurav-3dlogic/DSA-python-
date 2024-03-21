@@ -1,10 +1,13 @@
-# n = 20 
+#Prime Number
 
+n = int(input("Enter a number: "))
 
-# for i in range(1,n):
-#     for j in range(2,i//2):
-#         if i % j == 0:
-#             break
-#     else:
-#         print(i)  
-            
+if n > 1:
+    for i in range(2,n):
+        if n % i == 0:
+            print("Number is not prime")
+            break
+    else:
+        print("Number is prime")
+else:
+    print("Number is not prime")
