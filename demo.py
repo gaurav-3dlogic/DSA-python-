@@ -5,8 +5,9 @@ def sortList(arr,target):
     d = {}
     for i in range(len(arr)):
         p = target - arr[i]
-        if p in pairs:
+        if p in d:
             pairs.append([p,arr[i]])
         else:
             d[arr[i]] = i
+    return pairs
 print(sortList(arr,target))
