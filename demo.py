@@ -1,13 +1,12 @@
-arr = [1,3,4,2,10,-5]
+arr = [1,2,5,10,3,-5,4]
 target = 5
-def pairOfSum(arr,target):
+def sortList(arr,target):
     pairs = []
     d = {}
     for i in range(len(arr)):
         p = target - arr[i]
-        if p in d:
+        if p in pairs:
             pairs.append([p,arr[i]])
         else:
-            d[arr[i]] = i 
-    return pairs
-print(pairOfSum(arr,target))
+            d[arr[i]] = i
+print(sortList(arr,target))
