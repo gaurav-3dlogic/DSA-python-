@@ -1,30 +1,12 @@
-#Prime Number
+#prime
 
-n = int(input("Enter a number: "))
+n = 100
 
-#FOr loop 
-# def Prime(n):
-#     if n > 1:
-#         for i in range(2,n):
-#             if n % i == 0:
-#                 print("Number is not prime")
-#                 break
-#         else:
-#             print("Number is prime")
-#     else:
-#         print("Number is not prime")
-
-# Prime(n)
-
-#Using While Loop
-
-if n > 1:
-    while(2,n):
-        if n % 2 == 0:
-            print("Number is not prime")
+for i in range(2,n):
+    
+    for j in range(i+1,n):
+        if i % j == 0:
             break
     else:
-        print("Number is prime")
-else:
-    print("Number is not prime")
-        
+        print(i)
+      
