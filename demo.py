@@ -1,5 +1,4 @@
 
-#Pair of  sum by Gs
 
 # arr = [1,2,5,10,3,-5,4,6,-20]
 # target = 10
