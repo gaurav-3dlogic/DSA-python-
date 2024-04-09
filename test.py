@@ -1,4 +1,6 @@
-#Hey Gaurav
+# a = "Hey"
 
-import sys
-print(sys.version)
+# def test():
+#     print(a+" Gaurav")
+
+# test()
