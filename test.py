@@ -1,7 +1,7 @@
 x = ("apple", "mac", "gaurav")
 y = list(x)
 
-y[1] = "window"
+y.append("Saini")
 
 x = tuple(y)
 
