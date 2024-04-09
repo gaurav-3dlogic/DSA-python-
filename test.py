@@ -1,6 +1,3 @@
-# a = "Hey"
+import random
 
-# def test():
-#     print(a+" Gaurav")
-
-# test()
+print(random.randrange(0, 10))
