@@ -1,8 +1,6 @@
-x = ("apple", "mac", "gaurav")
-y = list(x)
+x = ("apple", "mac", "gaurav","saini","akash")
+*a,b,c = x
 
-y.append("Saini")
-
-x = tuple(y)
-
-print(x)
+print(a)
+print(b)
+print(c)
