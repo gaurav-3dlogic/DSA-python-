@@ -1,6 +1,6 @@
 x = ("apple", "mac", "gaurav","saini","akash")
-*a,b,c = x
+a,b,*c = x
 
 print(a)
 print(b)
-print(c)
+print(type(c))
