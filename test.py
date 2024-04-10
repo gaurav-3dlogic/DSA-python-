@@ -1,3 +1,4 @@
-x = ("apple", "mac", "gaurav","saini","akash")
-y = x.count()
-print(y)
+x = {"apple", "mac", "gaurav","saini","akash"}
+
+x.add("Sourav")
+print(x)
