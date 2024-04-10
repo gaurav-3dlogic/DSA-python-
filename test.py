@@ -1,6 +1,6 @@
 x = ("apple", "mac", "gaurav","saini","akash")
-a,b,*c = x
+i = 0
 
-print(a)
-print(b)
-print(type(c))
+while i < len(x):
+    print(x[i])
+    i += 1
