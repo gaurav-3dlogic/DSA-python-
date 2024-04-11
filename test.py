@@ -1,3 +1,3 @@
-def email():
-    print('Email')
-email()
+def email(a,b):
+    print(a,b)
+email("Gaurav","saini")
