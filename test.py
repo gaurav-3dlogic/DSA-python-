@@ -1,3 +1,6 @@
 a = 10
-b = 20
-print("A") if a > b else print("B")
+i = 0
+
+while i <= a:
+    print(i)
+    i += 1
