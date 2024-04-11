@@ -1,3 +1,6 @@
-def email(a,b):
-    print(a,b)
-email("Gaurav","saini")
+def test(a):
+    for x in a:
+        print(x)
+fruits = ["apple", "banana", "kiwi"]
+test(fruits)
+
