@@ -1,9 +1,10 @@
-class gaurav:
+class test:
     def __init__(self,name,age):
         self.name = name
         self.age = age
+    
+    def moba(self):
+        print("My golu name is " + self.name)
 
-    def __str__(self):
-        return f"{self.name},{self.age}"
-p1 = gaurav("Akash",20)
-print(p1)
+p1 = test("pari",9)
+p1.moba()
