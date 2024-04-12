@@ -1,10 +1,11 @@
-class test:
-    def __init__(self,name,age):
+class abc():
+    def __init__(self, name,age):
         self.name = name
         self.age = age
     
-    def moba(self):
-        print("My golu name is " + self.name)
-
-p1 = test("pari",9)
-p1.moba()
+    def test(self):
+        print(self.name,self.age)
+class xyz(abc):
+    pass
+p1 = xyz("Gaurav",26)
+p1.test()
