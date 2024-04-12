@@ -4,12 +4,15 @@ class abc:
         self.age = age
     
     def test(self):
-        print(self.name, self.age)
+        print(self.name,self.age)
+
 class xyz(abc):
-    def __init__(self,name,age):
+    def __init__(self,name,age,college):
         super().__init__(name,age)
-p1 = xyz("Gaurav",27)
-p1.test()
+        self.college = "sharda"
+   
+    def moba(self):
+        print(self.name,self.age,self.college,"Hey")
 
-
-        
+p1 = xyz("Gaurav",27,"sharda")
+print(p1.moba())
