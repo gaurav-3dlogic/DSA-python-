@@ -1,3 +1,5 @@
 
-x = lambda a , b ,c : a + b - c
-print(x(10,10,2))
+def test(n):
+    return lambda x: x * n
+res = test(5)
+print(res(6))
