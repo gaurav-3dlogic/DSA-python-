@@ -1,4 +1,3 @@
-import platform
+import datetime
 
-x = dir(platform)
-print(x)
+print(datetime.datetime.now())
