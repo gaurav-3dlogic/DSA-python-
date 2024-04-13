@@ -1,18 +1,17 @@
-class abc:
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
+class test:
+    def __iter__(self):
+        self.x = 1
+        return self
     
-    def test(self):
-        print(self.name,self.age)
+    def __next__(self):
+        y = self.x
+        self.x += 1
+        return y
+    
 
-class xyz(abc):
-    def __init__(self,name,age,college):
-        super().__init__(name,age)
-        self.college = "sharda"
-   
-    def moba(self):
-        print(self.name,self.age,self.college,"Hey")
+p1 = test()
+res = iter(p1)
 
-p1 = xyz("Gaurav",27,"sharda")
-print(p1.moba())
+print(next(res))
+print(next(res))
+print(next(res))
