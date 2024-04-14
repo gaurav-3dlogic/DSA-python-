@@ -1,6 +1,10 @@
-# import datetime
+import json
 
 
-# x = datetime.datetime.now()
-# print(x.year, x.month, x.day, x.hour,x.minute, x.second)
+a = '{"a": "apple", "b": "banana", "c": "kiwi"}'
+
+y = json.loads(a)
+
+
+print(y['b'])
 
