@@ -1,10 +1,10 @@
-import json
 
+# try:
+#     print(x)
+# except NameError:
+#   print("Variable x is not defined")
+# else:
+#   print("Something else went wrong")
 
-a = '{"a": "apple", "b": "banana", "c": "kiwi"}'
-
-y = json.loads(a)
-
-
-print(y['b'])
-
+# finally:
+#    print("Moba")
