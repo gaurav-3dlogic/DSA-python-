@@ -1,10 +1,10 @@
-# def main(func):
-#     def inner():
-#         func()
-#         print("inner")
-#     return inner
+def main(func):
+    def inner():
+        func()
+        print("inner")
+    return inner
 
-
+#test
 
 
 
