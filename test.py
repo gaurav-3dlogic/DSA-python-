@@ -1,14 +1,8 @@
-# def main(func):
-#     def inner():
-#         func()
-#         print("inner")
-#     return inner
 
-#test
+def test(func):
+    func
+    def inner():
 
 
-
-# @main
-# def test():
-#     print("Testing")
-# test()
+def main():
+    print("test")
