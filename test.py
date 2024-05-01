@@ -1,8 +1,14 @@
 
-def test(func):
-    func
-    def inner():
+# def decor(printer):
+#     def inner():
+#         printer()
+#         print("inner")
+#     return inner
+
+# @decor
+# def printer():
+#     print("test")
+
+# printer()
 
 
-def main():
-    print("test")

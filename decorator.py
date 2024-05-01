@@ -21,7 +21,7 @@ def decor(printer):
         printer()
         print("Welcome")
     return inner
-
+    
 
 
 @decor
