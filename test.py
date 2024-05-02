@@ -5,10 +5,10 @@
 #         print("inner")
 #     return inner
 
-# @decor
-# def printer():
-#     print("test")
+@decor
+def printer():
+    print("test")
 
-# printer()
+printer()
 
 
