@@ -1,4 +1,4 @@
-#test new
+
 import sys
 # def decor(printer):
 #     def inner():
